@@ -80,23 +80,37 @@ section h1 {
     margin-right: 20px;        /* Spacing between image and text */
 }
 
-.tags {
-    font-weight: 500;
-    color: #666;               /* Lighter color for tags */
-    margin-bottom: 10px;       /* Spacing below the tags */
-}
+
 
 .case-study h2 {
     font-size: 1.5rem;         /* Size for the title */
     margin: 10px 0;           /* Spacing around the title */
+    max-width: 700px;
 }
 
 .case-study p {
     color: #444;               /* Darker text for description */
+    
     line-height: 1.6;          /* Increase line spacing for readability */
 }
 
 /* Section Colors (If needed) */
 #ux-cases {
     background-color: #fff;    /* White background for case studies */
+}
+.tags {
+    display: inline-block;          /* Makes the element inline with padding */
+    background-color: #000;        /* Black background */
+    color: #fff ;              /* White text */
+    padding: 5px 15px;             /* Padding around the text */
+    border-radius: 15px;           /* Rounded corners */
+    font-size: 14px;               /* Font size for tags */
+    /* margin-bottom: 10px;           Spacing below the tags */
+    font-weight: 500;              /* Medium weight for better visibility */
+}
+.tags p {
+    color: #fff ;
+    margin: 0;                     /* Remove default margins from the p element */
+    padding: 0;                    /* Reset padding if any */
+
 }
