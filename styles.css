@@ -1,0 +1,74 @@
+/* Google Font: Urbanist */
+body {
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    background-color: #333;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ff9800;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+
+#intro {
+    background-color: #f0f0f0;
+}
+
+#ux-cases {
+    background-color: #eaeaea;
+}
+
+#graphic-design {
+    background-color: #ddd;
+}
+
+#contact {
+    background-color: #ccc;
+}
