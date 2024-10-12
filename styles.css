@@ -16,9 +16,17 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: center;
-    padding: 1rem 0;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center vertically */
+    padding: 1rem 2rem;
     background-color: #f7f7f7;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: rgb(15, 15, 15);
+    text-transform: lowercase;
 }
 
 .nav-list {
@@ -54,7 +62,7 @@ section p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
-    color: #666;
+    color: #686868;
 }
 
 #intro {
