@@ -16,17 +16,18 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between logo and nav */
-    align-items: center; /* Center vertically */
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
     background-color: #f7f7f7;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2rem;   
+    font-weight: 700;  
+    letter-spacing: 0.05rem; 
     color: rgb(15, 15, 15);
-    text-transform: lowercase;
+    text-transform: uppercase; 
 }
 
 .nav-list {
@@ -50,7 +51,7 @@ header {
 
 section {
     padding: 100px 20px;
-    text-align: center;
+    text-align: left;  /* Align text to the left */
 }
 
 section h1 {
@@ -58,25 +59,44 @@ section h1 {
     margin-bottom: 20px;
 }
 
-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #686868;
+.case-study {
+    display: flex;
+    background-color: #f0f0f0;  /* Light gray background */
+    border-radius: 10px;        /* Rounded corners */
+    margin: 20px 0;             /* Spacing between case studies */
+    padding: 20px;              /* Padding inside the case study */
 }
 
-#intro {
-    background-color: #f0f0f0;
+.case-study-info {
+    flex: 1;                    /* Takes up the remaining space */
+    padding: 20px;             /* Padding around text */
 }
 
+.case-study-image {
+    background-color: #ccc;    /* Grey rectangle for placeholder */
+    flex: 0 0 200px;           /* Fixed width for image section */
+    height: 150px;             /* Set height for image */
+    border-radius: 10px;       /* Rounded corners */
+    margin-right: 20px;        /* Spacing between image and text */
+}
+
+.tags {
+    font-weight: 500;
+    color: #666;               /* Lighter color for tags */
+    margin-bottom: 10px;       /* Spacing below the tags */
+}
+
+.case-study h2 {
+    font-size: 1.5rem;         /* Size for the title */
+    margin: 10px 0;           /* Spacing around the title */
+}
+
+.case-study p {
+    color: #444;               /* Darker text for description */
+    line-height: 1.6;          /* Increase line spacing for readability */
+}
+
+/* Section Colors (If needed) */
 #ux-cases {
-    background-color: #eaeaea;
-}
-
-#graphic-design {
-    background-color: #ddd;
-}
-
-#contact {
-    background-color: #ccc;
+    background-color: #fff;    /* White background for case studies */
 }
