@@ -45,12 +45,6 @@ header {
     transition: color 0.3s ease;
 }
 
-.nav-list li a.active {
-    font-weight: bold;           /* Makes the active link bold */
-    pointer-events: none;       /* Prevents hover effects */
-    color: #996211;             /* Change color if desired */
-}
-
 .nav-list li a:hover {
     color: #996211;
 }
@@ -105,8 +99,8 @@ section h1 {
 
 .case-study p {
     color: #444;               /* Darker text for description */
-    font-weight: 500;
-    line-height: 1.5;          /* Increase line spacing for readability */
+    
+    line-height: 1.6;          /* Increase line spacing for readability */
 }
 
 /* Section Colors (If needed) */
