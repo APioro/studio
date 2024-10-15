@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 header {
@@ -15,19 +16,21 @@ header {
 }
 
 .navbar {
+    min-width: 750px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #f7f7f7;
+    height: 20px; /* Set a fixed height */
 }
 
 .logo {
-    font-size: 2rem;   
+    font-size: 1.3rem;   
     font-weight: 700;  
     letter-spacing: 0.05rem; 
     color: rgb(15, 15, 15);
-    text-transform: uppercase; 
+    text-transform: lowercase; 
 }
 
 .nav-list {
@@ -41,8 +44,13 @@ header {
     text-decoration: none;
     color: rgb(15, 15, 15);
     font-weight: 500;
-    font-size: 18px;
     transition: color 0.3s ease;
+}
+
+.nav-list li a.active {
+    font-weight: bold;           /* Makes the active link bold */
+    pointer-events: none;       /* Prevents hover effects */
+    color: #996211;             /* Change color if desired */
 }
 
 .nav-list li a:hover {
@@ -54,15 +62,86 @@ section {
     text-align: left;  /* Align text to the left */
 }
 
-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+#project1 {
+    padding: 50px 20px;
+    text-align: left;  /* Align text to the left */
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Space between header and details */
+    max-width: 950px;
+    margin: auto;
+}
+
+.project-header h1{
+    font-size: 3.2rem;
+}
+
+.project-image {
+    background-color: #ccc; /* Placeholder color */
+    width: fit-content;     /* Full width */
+    height: auto;          /* Set height to auto for flexibility */
+    max-width: 950px;
+    border-radius: 20px;   /* Rounded corners */
+    padding: 0;
+    overflow: hidden;       /* Ensures no overflow */
+}
+
+.project-image img {
+    width: 100%;            /* Ensures the image fills the container */
+    height: auto;          /* Keeps the aspect ratio */
+    border-radius: 20px;   /* Rounded corners */
+    display: block;       /* Ensures the image is a block element */
+    object-fit: cover;      /* Ensures the image covers the area */
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+    max-width: 950px;
+    margin: auto;
+}
+
+.project-info {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 30px; /* Space between items */
+    max-width: 950px;
+    margin-top: 20px;
+}
+
+.project-info div {
+    flex: 1; /* Flex-grow for equal width */
+    width: 200px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 31%);
+}
+
+.tasks ul{
+    list-style-type: none;
+    padding: 0;             /* Removes default padding */
+    margin: 0;              /* Removes default margin */
+}
+
+.tools ul{
+    list-style-type: none;
+    padding: 0;             /* Removes default padding */
+    margin: 0;              /* Removes default margin */
+}
+
+.project-info strong {
+    font-weight: 700; /* Bold for titles */
 }
 
 .case-study {
     display: flex;
     min-width: 500px;
-    max-width: 800px;          /* Set your desired maximum width */
+    max-width: 950px;          /* Set your desired maximum width */
     background-color: #f0f0f0;  /* Light gray background */
     border-radius: 10px;        /* Rounded corners */
     margin: 20px auto;             /* Spacing between case studies */
@@ -88,8 +167,6 @@ section h1 {
     margin-right: 20px;        /* Spacing between image and text */
 }
 
-
-
 .case-study h2 {
     font-size: 1.5rem;         /* Size for the title */
     margin: 10px 0;           /* Spacing around the title */
@@ -107,6 +184,7 @@ section h1 {
 #ux-cases {
     background-color: #fff;    /* White background for case studies */
 }
+
 .tags {
     display: inline-block;          /* Makes the element inline with padding */
     background-color: #000;        /* Black background */
@@ -114,12 +192,78 @@ section h1 {
     padding: 5px 15px;             /* Padding around the text */
     border-radius: 15px;           /* Rounded corners */
     font-size: 14px;               /* Font size for tags */
-    /* margin-bottom: 10px;           Spacing below the tags */
     font-weight: 500;              /* Medium weight for better visibility */
 }
+
 .tags p {
     color: #fff ;
     margin: 0;                     /* Remove default margins from the p element */
     padding: 0;                    /* Reset padding if any */
+}
 
+.tag:nth-child(1) {
+    background-color: #1e90ff;
+}
+
+.tag:nth-child(2) {
+    background-color: #32cd32;
+}
+
+.tag:nth-child(3) {
+    background-color: #ff8c00;
+}
+
+.tag:nth-child(4) {
+    background-color: #996211;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tile Styles */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s;
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Match the border-radius of the tile */
+}
+
+.grid-item h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center; /* Center text for title */
+}
+
+/* Hover Effect */
+.grid-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Classes for different sizes of items */
+.grid-item.large {
+    grid-column: span 2; /* Span 2 columns */
+    grid-row: span 2;    /* Span 2 rows */
+}
+
+.grid-item.medium {
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1;    /* Span 1 row */
+}
+
+.grid-item.small {
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1;    /* Span 1 row */
 }
