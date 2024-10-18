@@ -185,36 +185,40 @@ section {
     background-color: #fff;    /* White background for case studies */
 }
 
-.tags {
+/* Style for the tags container */
+.tags-container {
+    display: flex;               /* Align tags in a row */
+    flex-wrap: wrap;            /* Wrap tags to next line if needed */
+    gap: 5px;                   /* Space between tags */
+    margin-top: 10px;           /* Space above tags */
+}
+
+/* Individual tag styles */
+.tag {
     display: inline-block;          /* Makes the element inline with padding */
-    background-color: #000;        /* Black background */
-    color: #fff ;              /* White text */
-    padding: 5px 15px;             /* Padding around the text */
+    background-color: #000;        /* Default black background */
+    color: #fff;                   /* White text */
+    padding: 5px 10px;             /* Padding around the text */
     border-radius: 15px;           /* Rounded corners */
-    font-size: 14px;               /* Font size for tags */
+    font-size: 12px;               /* Font size for tags */
     font-weight: 500;              /* Medium weight for better visibility */
 }
 
-.tags p {
-    color: #fff ;
-    margin: 0;                     /* Remove default margins from the p element */
-    padding: 0;                    /* Reset padding if any */
-}
-
+/* Change tag colors for specific tags */
 .tag:nth-child(1) {
-    background-color: #1e90ff;
+    background-color: #690627; /* Blue for first tag */
 }
 
 .tag:nth-child(2) {
-    background-color: #32cd32;
+    background-color: #b10058; /* Green for second tag */
 }
 
 .tag:nth-child(3) {
-    background-color: #ff8c00;
+    background-color: #996211; /* Orange for third tag */
 }
 
 .tag:nth-child(4) {
-    background-color: #996211;
+    background-color: #996211; /* Brown for fourth tag */
 }
 
 .grid-container {
@@ -231,7 +235,8 @@ section {
     overflow: hidden;
     border-radius: 10px; /* Rounded corners */
     transition: transform 0.3s;
-    background-color: #f0f0f0; /* Placeholder background */
+    background-color: transparent; /* Placeholder background */
+    padding: 20px; /* Padding */
 }
 
 .grid-item img {
@@ -242,10 +247,9 @@ section {
 }
 
 .grid-item h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center; /* Center text for title */
+    font-size: 1.5rem;            /* Size for the title */
+    margin: 10;                    /* Remove default margins */
+    color: #000;                  /* Title color */
 }
 
 /* Hover Effect */
@@ -260,10 +264,33 @@ section {
 
 .grid-item.medium {
     grid-column: span 1; /* Span 1 column */
-    grid-row: span 1;    /* Span 1 row */
+    grid-row: span 2;    /* Span 1 row */
 }
 
 .grid-item.small {
     grid-column: span 1; /* Span 1 column */
     grid-row: span 1;    /* Span 1 row */
+}
+/* Container centered vertically and horizontally */
+#intro-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the block */
+    align-items: center; /* Vertically center the block */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+}
+
+/* Text block */
+#typing-text {
+    font-size: 6rem; /* Adjust text size */
+    max-width: 700px; /* Constrain the block width */
+    width: 100%; /* Make it responsive */
+    line-height: 1.5; /* Space between lines */
+    text-align: left; /* Text starts from the left */
+    white-space: pre-wrap; /* Ensure text wraps to the next line */
+}
+
+/* For the highlighted last word "sensible" */
+.highlight {
+    color: #ff8c00; /* Change this to whatever color you want */
 }
