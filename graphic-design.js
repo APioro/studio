@@ -33,14 +33,14 @@ const projects = [
 
 // Function to create and append tiles to the grid
 function createTiles() {
-    const gridContainer = document.getElementById("grid-container");
+    const gridContainer = document.getElementById("grid-container"); 
 
     projects.forEach(project => {
         const gridItem = document.createElement("div");
         gridItem.classList.add("grid-item", project.size); // Add size class
         
         // Create image element
-        const img = document.createElement("img");
+        const img = document.createElement("img"); 
         img.src = project.image; // Original image
         img.alt = project.title;
         img.loading = "lazy"; // Add lazy loading

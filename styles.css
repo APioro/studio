@@ -203,6 +203,20 @@ section {
     font-size: 12px;               /* Font size for tags */
     font-weight: 500;              /* Medium weight for better visibility */
 }
+.tag-cloud-wrapper {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    margin-top: 30px;
+  
+}
+
+.tag-cloud {
+    display: flex;
+    flex-direction: column;   /* Aligns the tags vertically */
+    gap: 20px;                /* Space between tags */
+    align-items: center;      /* Center the tags horizontally */
+}
 
 /* Change tag colors for specific tags */
 .tag:nth-child(1) {
@@ -219,6 +233,18 @@ section {
 
 .tag:nth-child(4) {
     background-color: #996211; /* Brown for fourth tag */
+}
+
+.tagblack {
+    display: flex; 
+    justify-content: center; 
+    width: fit-content;        /* Makes the element inline with padding */
+    background-color: #000;        /* Default black background */
+    color: #fff;                   /* White text */
+    padding: 8px 14px;             /* Padding around the text */
+    border-radius: 15px;           /* Rounded corners */
+    font-size: 14px;               /* Font size for tags */
+    font-weight: 500;              /* Medium weight for better visibility */
 }
 
 .grid-container {
@@ -309,4 +335,136 @@ section {
 
 .highlight-lizzanka {
     color: #91ff00;
+}
+
+/* Problem Section */
+.project-part {
+    text-align: center;
+    padding: 0px ;
+    max-width: 950px;
+    margin: auto;
+}
+
+.project-part h3 {
+    font-weight: 700;
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    
+}
+
+.project-part .h2-center {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-part .h2-left {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-part .p-center {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.project-part .p-left  {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 ;
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
+
+.custom-divider {
+    justify-content: center ;
+    display: flex;
+    border-top: 1px solid #666; /* Defines the thickness and color of the divider */
+    max-width: 950px;        /* Full width of the container */
+    margin: 100px auto;            /* Adds spacing above and below the divider */
+}
+
+.dynamic-content-container {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: space-between; /* Distributes space between the images */
+    gap: 20px; /* Adds spacing between the items */
+}
+
+.dynamic-content-container div {
+    flex: 0 0 300px; /* Flex-grow, shrink, and base size of 200px */
+    display: flex;
+}
+
+.dynamic-content-container div img {
+    width: 100%; /* Ensures the image takes up full width of the container */
+    height: auto; /* Keeps the image aspect ratio */
+}
+
+.dynamic-content-container div:last-child {
+    justify-content: flex-end; /* Aligns the last image to the right */
+}
+
+
+
+/* CHAT ICONS FOR PROJECT 1 */
+.chat-wrapper {
+    position: relative; /* Establish positioning context for the chat bubble */
+    display: inline-block; /* Allow for proper sizing based on content */
+}
+
+.chat-icon {
+    width: 40px; /* Size of the icon */
+    height: 40px;
+    border-radius: 50%; /* Make it round */
+    background-color: #4CAF50; /* Circle color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; /* Space between icon and chat bubble */
+}
+
+.chat-icon img {
+    width: 70%; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.chat-bubble {
+    max-width: 200px; /* Maximum width of the chat bubble */
+    background-color: #ffffff; /* White background for the bubble */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Padding inside the bubble */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a floating effect */
+    position: absolute; /* Position for the arrow effect */
+    bottom: 100%; /* Position it above the icon */
+    left: 50%; /* Center the bubble horizontally */
+    transform: translateX(-50%); /* Center it accurately */
+    margin-bottom: 10px; /* Space between the bubble and the icon */
+}
+
+.chat-bubble p {
+    margin: 0; /* Remove default margin */
+}
+
+.chat-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Position below the bubble */
+    left: 20px; /* Align with the bubble */
+    border-width: 8px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent; /* Arrow effect */
 }
