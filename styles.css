@@ -399,72 +399,60 @@ section {
     max-width: 950px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping */
-    justify-content: space-between; /* Distributes space between the images */
-    gap: 20px; /* Adds spacing between the items */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.dynamic-content-container div {
-    flex: 0 0 300px; /* Flex-grow, shrink, and base size of 200px */
+.dynamic-content-container > div {
+    flex: 0 0 300px; /* Fixed width of 300px */
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px; /* Ensures content stays below 300px */
 }
 
 .dynamic-content-container div img {
     width: 100%; /* Ensures the image takes up full width of the container */
     height: auto; /* Keeps the image aspect ratio */
+    max-width: 300px; /* Locks the image width to 300px */
 }
 
-.dynamic-content-container div:last-child {
-    justify-content: flex-end; /* Aligns the last image to the right */
-}
-
-
-
-/* CHAT ICONS FOR PROJECT 1 */
-.chat-wrapper {
-    position: relative; /* Establish positioning context for the chat bubble */
-    display: inline-block; /* Allow for proper sizing based on content */
-}
-
-.chat-icon {
-    width: 40px; /* Size of the icon */
-    height: 40px;
-    border-radius: 50%; /* Make it round */
-    background-color: #4CAF50; /* Circle color */
+/* Speech container adjustments */
+.speech-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px; /* Space between icon and chat bubble */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Stays within the 300px parent width */
+    gap: 10px; /* Adds spacing between each speech bubble */
+    padding-right: 30px; /* Add padding to the right */
 }
 
-.chat-icon img {
-    width: 70%; /* Icon size */
-    height: auto; /* Maintain aspect ratio */
+/* Speech bubbles */
+.speech {
+    font-size: 1.2em;
+    color: #fff;
+    background: #7e4824;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: calc(100% - 30px); /* Subtract space for the arrow */
+    position: relative;
+    height: auto;
+    margin: 10px 0; /* Vertical space between bubbles */
 }
 
-.chat-bubble {
-    max-width: 200px; /* Maximum width of the chat bubble */
-    background-color: #ffffff; /* White background for the bubble */
-    border-radius: 15px; /* Rounded corners */
-    padding: 10px; /* Padding inside the bubble */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a floating effect */
-    position: absolute; /* Position for the arrow effect */
-    bottom: 100%; /* Position it above the icon */
-    left: 50%; /* Center the bubble horizontally */
-    transform: translateX(-50%); /* Center it accurately */
-    margin-bottom: 10px; /* Space between the bubble and the icon */
-}
-
-.chat-bubble p {
-    margin: 0; /* Remove default margin */
-}
-
-.chat-bubble::after {
+.speech::after {
     content: '';
     position: absolute;
-    top: 100%; /* Position below the bubble */
-    left: 20px; /* Align with the bubble */
-    border-width: 8px;
+    width: 0;
+    height: 0;
     border-style: solid;
-    border-color: #ffffff transparent transparent transparent; /* Arrow effect */
+}
+
+/* Tail on the left */
+.speech.left::after {
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #7e4824 transparent transparent;
+    left: -15px; /* Position the triangle inside the 300px width */
+    top: calc(50% - 15px); /* Center the triangle vertically */
 }
