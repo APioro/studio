@@ -275,7 +275,7 @@ section {
 #intro-container {
     display: flex;
     justify-content: center; /* Horizontally center the block */
-    align-items: center; /* Vertically center the block */
+    /* align-items: center; Vertically center the block */
     height: 100vh; /* Full viewport height */
     padding: 20px;
 }
@@ -283,7 +283,7 @@ section {
 /* Text block */
 #typing-text {
     font-size: 6rem; /* Adjust text size */
-    max-width: 700px; /* Constrain the block width */
+    max-width: 900px; /* Constrain the block width */
     width: 100%; /* Make it responsive */
     line-height: 1.5; /* Space between lines */
     text-align: left; /* Text starts from the left */
@@ -291,6 +291,22 @@ section {
 }
 
 /* For the highlighted last word "sensible" */
-.highlight {
-    color: #ff8c00; /* Change this to whatever color you want */
+.highlight-sensible {
+    color: #ff8c00;
+}
+
+.highlight-creative {
+    color: #6200ff;
+}
+
+.highlight-fun {
+    color: #0099ff;
+}
+
+.highlight-boonka {
+    color: #f700ff;
+}
+
+.highlight-lizzanka {
+    color: #91ff00;
 }

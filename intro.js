@@ -1,80 +1,120 @@
-// const text = "I'm a learning UX practitioner who loves to organize things and make them sensible.";
-// const targetWord = "sensible."; // The word to highlight
-// let index = 0;
-// let targetIndex = 0; // Track the position within the target word
-// let currentSpeed = 50; // Initial typing speed
-// const typingText = document.getElementById("typing-text");
-
-// function typeWriter() {
-//     if (index < text.length) {
-//         const currentChar = text.charAt(index);
-
-//         var a = text.slice(index, index + targetWord.length - targetIndex);
-//         var b = targetWord.substring(targetIndex, targetWord.length);
-
-//         if (targetIndex != targetWord.length && text.slice(index, index + targetWord.length - targetIndex) == targetWord.substring(targetIndex, targetWord.length)) {
-//             typingText.innerHTML += "<span class=\"highlight\">" + targetWord.charAt(targetIndex) + "</span>";
-//             targetIndex++;
-//         } else {
-//             typingText.innerHTML += currentChar;
-//         }
-
-//         index++;
-
-//         // Gradually speed up the typing speed
-//         if (currentSpeed > 50) {
-//             currentSpeed -= 2;
-//         }
-
-//         setTimeout(typeWriter, currentSpeed); // Call typeWriter after currentSpeed milliseconds
-//     }
-// }
-
-// // Trigger the typewriter effect after the page is loaded
-// document.addEventListener("DOMContentLoaded", function() {
-//     typeWriter();
-// });
-
 const text = "I'm a learning UX practitioner who loves to organize things and make them ";
-const targetWords = [
-    { word: "sensible", style: "highlight" }, 
-    { word: "creative", style: "highlight-creative" }, 
-    { word: "fun", style: "highlight-fun" }
+const highlightWords = [
+    { text: "sensible", style: "highlight-sensible" }, 
+    { text: "creative", style: "highlight-creative" }, 
+    { text: "fun", style: "highlight-fun" },
+    { text: "boonka", style: "highlight-boonka" },
+    { text: "lizzanka", style: "highlight-lizzanka" }
 ]; 
-let currentTargetWordIndex = 0; // Index to track the current target word
-let index = 0; // Index to track the position in the text
+let currentHighlightWordIndex = 0;
+let index = 0;
+let currentSpeed = 60; // Lower number = faster
 const typingText = document.getElementById("typing-text");
-const currentSpeed = 100; // Initial typing speed
 
-// Function to type out the current target word
-function typeWord() {
-    if (index < targetWords[currentWordIndex].word.length) {
-        // Append the next character of the target word with styling
-        typingText.innerHTML += `<span class="${targetWords[currentWordIndex].style}">${targetWords[currentWordIndex].word.charAt(index)}</span>`;
+function typeText() {
+    // Type the text one character at a time as long as the current index has not yet reached the end of the text
+    if (index < text.length) {
+        
+        // Gets the character from the text on the current index (first index is always 0)
+        typingText.innerHTML += text.charAt(index);
+        
+        // Increment the current index by 1 so that we know that the current character has been typed and we can now move on to the next one
         index++;
-        setTimeout(typeWord, currentSpeed);
-    } else {
-        // Once the word is fully typed, start deleting it
-        setTimeout(deleteWord, currentSpeed * 2); // Pause before deleting
+
+        // For each character we type, the typing speed will increase by 2 until it reaches its max speed of 40
+        if (currentSpeed > 40) {
+            currentSpeed -= 2;
+        }
+
+        // We run this same function again but with a timeout, simulating the "typing" speed. Next run will be for the next index.
+        setTimeout(typeText, currentSpeed);
+    }
+    // If we have now reached the end of the text...
+    else {
+        // ...we reset the index to use it for the highlight words...
+        index = 0;
+
+        // ...and start typing the first highlight word, with a bit higher timeout to make it slower
+        setTimeout(typeHighlightWord, currentSpeed * 2);
     }
 }
 
-// Function to delete the current target word character by character
-function deleteWord() {
+function typeHighlightWord() {
+    // Checking which the current highlight word should be and fetching it into our currentHighlightWord variable
+    const currentHighlightWord = highlightWords[currentHighlightWordIndex];
+
+    // Try to look for the <span> container for the current highlight word
+    let highlightWordSpan = document.getElementById(currentHighlightWord.text);
+    
+    // If the <span> container does _not_ exist...
+    if (!highlightWordSpan) {
+        
+        // Create the element (the <span> tag)...
+        highlightWordSpan = document.createElement("span");
+        
+        // ...set the class from the current highlight word's style property...
+        highlightWordSpan.setAttribute("class", currentHighlightWord.style);
+        
+        // ...set the id from the current highlight word's text property...
+        highlightWordSpan.setAttribute("id", currentHighlightWord.text);
+        
+        // ...and then put it into the typingText div
+        typingText.appendChild(highlightWordSpan);
+    }
+
+    // Type the current highlight word one character at a time as long as the current index has not yet reached the end of the highlight word
+    if (index < currentHighlightWord.text.length) {
+        
+        // Gets the character from the current highlight word on the current index (first index is always 0)
+        highlightWordSpan.innerText += currentHighlightWord.text.charAt(index);
+        
+        // Increment the current index by 1 so that we know that the current character has been typed and we can now move on to the next one
+        index++;
+
+        // We run this same function again but with a timeout, simulating the "typing" speed. Next run will be for the next index.
+        setTimeout(typeHighlightWord, currentSpeed * 2);
+    } else {
+        
+        // End if this is the last word in the array...
+        if (currentHighlightWordIndex == highlightWords.length - 1) {
+            return;
+        }
+
+        // ...otherwise start deleting the newly typed out word
+        setTimeout(deleteHighlightWord, currentSpeed * 10);
+    }
+}
+
+function deleteHighlightWord() {
+    // Checking which the current highlight word should be and fetching it into our currentHighlightWord variable
+    const currentHighlightWord = highlightWords[currentHighlightWordIndex];
+
+    // Get the <span> container for the current highlight word. We know that it will exist here since this function only runs for the first time after a highlight word has been typed out
+    let highlightWordSpan = document.getElementById(currentHighlightWord.text);
+
     if (index > 0) {
-        // Remove the last character of the target word
-        typingText.innerHTML = typingText.innerHTML.slice(0, -1);
+        // We slice one character from the last index of the span container's text (the highlight word)
+        highlightWordSpan.innerText = highlightWordSpan.innerText.slice(highlightWordSpan.innerText.lastIndexOf, -1);
+
+        // Decrement by 1 to move on to the next character to remove
         index--;
-        setTimeout(deleteWord, currentSpeed);
-    } else {
-        // Move to the next word and reset index
-        currentWordIndex = (currentWordIndex + 1) % targetWords.length; // Loop through target words
-        index = 0; // Reset index for the new word
-        setTimeout(typeWord, currentSpeed); // Type the next word
+
+        // Run this same function again but for the next letter to be deleted
+        setTimeout(deleteHighlightWord, currentSpeed);
+    }
+    // We get here if the index is 0, indicating that the current highlight word has now been removed 
+    else {
+        // Increment currentHighlightWordIndex to indicate that we can now move on to the next word in the array
+        currentHighlightWordIndex++;
+
+        // Reset the index so that we can start on the first letter for the next word
+        index = 0;
+
+        // Start typing the next highlight word
+        setTimeout(typeHighlightWord, currentSpeed * 2);
     }
 }
 
-// Start the typing effect after the page has loaded
 document.addEventListener("DOMContentLoaded", function() {
-    typeWord();
+    typeText(); // Run typeText when page has loaded
 });
