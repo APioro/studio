@@ -415,9 +415,9 @@ section {
 .dynamic-content-container div img {
     width: 100%; /* Ensures the image takes up full width of the container */
     height: auto; /* Keeps the image aspect ratio */
-    max-width: 300px; /* Locks the image width to 300px */
+    max-width: 900px; /* Locks the image width to 300px */
 }
-
+/*
 /* Speech container adjustments */
 .speech-container {
     display: flex;
@@ -428,17 +428,17 @@ section {
     padding-right: 30px; /* Add padding to the right */
 }
 
-/* Speech bubbles */
+/*
 .speech {
     font-size: 1.2em;
     color: #fff;
     background: #7e4824;
     padding: 10px 20px;
     border-radius: 10px;
-    width: calc(100% - 30px); /* Subtract space for the arrow */
+    width: calc(100% - 30px);
     position: relative;
     height: auto;
-    margin: 10px 0; /* Vertical space between bubbles */
+    margin: 10px 0; 
 }
 
 .speech::after {
@@ -449,10 +449,10 @@ section {
     border-style: solid;
 }
 
-/* Tail on the left */
 .speech.left::after {
     border-width: 15px 15px 15px 0;
     border-color: transparent #7e4824 transparent transparent;
-    left: -15px; /* Position the triangle inside the 300px width */
-    top: calc(50% - 15px); /* Center the triangle vertically */
+    left: -15px;
+    top: calc(50% - 15px); 
 }
+ */
