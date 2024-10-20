@@ -358,6 +358,13 @@ section {
     white-space: pre-wrap; /* Ensure text wraps to the next line */
 }
 
+@media (max-width: 600px) {
+    #typing-text {
+        font-size: 5vw; /* Increase font size for small screens */
+        padding: 10px; /* Add padding for better spacing */
+    }
+}
+
 /* For the highlighted last word "sensible" */
 .highlight-sensible {
     color: #ff8c00;
