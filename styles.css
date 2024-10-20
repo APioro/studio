@@ -362,6 +362,7 @@ section {
     #typing-text {
         font-size: 5vw; /* Increase font size for small screens */
         padding: 10px; /* Add padding for better spacing */
+        max-width: 100%; 
     }
 }
 
