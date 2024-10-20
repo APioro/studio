@@ -118,3 +118,4 @@ function deleteHighlightWord() {
 document.addEventListener("DOMContentLoaded", function() {
     typeText(); // Run typeText when page has loaded
 });
+
