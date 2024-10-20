@@ -253,6 +253,14 @@ section {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    
+}
+
+@media (max-width: 600px) { /* Media query for phones */
+    .grid-container {
+        max-width: 100%; /* Use full width on phones */
+        padding: 0 10px; /* Optional: add some padding for better spacing */
+    }
 }
 
 /* Tile Styles */
