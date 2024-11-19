@@ -71,20 +71,22 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px; /* Space between header and details */
-    max-width: 950px;
+   margin-top:0;
+    max-width: 76vw;
     margin: auto;
 }
 
 .project-header h1{
     font-size: 3.2rem;
+    margin-top: 70px;
+    margin-bottom: 0;
 }
 
 .project-image {
     background-color: #ccc; /* Placeholder color */
     width: fit-content;     /* Full width */
     height: auto;          /* Set height to auto for flexibility */
-    max-width: 950px;
+    max-width: 76vw;
     border-radius: 20px;   /* Rounded corners */
     padding: 0;
     overflow: hidden;       /* Ensures no overflow */
@@ -102,23 +104,28 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Space between sections */
-    max-width: 950px;
-    margin: auto;
+    max-width: 76vw;
+    margin: 40px auto 140px auto;
 }
 
 .project-info {
     display: flex;
+    flex: 1 1 200px;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    gap: 30px; /* Space between items */
-    max-width: 950px;
-    margin-top: 20px;
+    justify-content: space-between;
+    gap: 70px; /* Space between items */
+    max-width: 70vw;
+    margin-top: 60px;
 }
 
 .project-info div {
-    flex: 1; /* Flex-grow for equal width */
-    width: 200px;
-    font-size: 0.9rem;
+    
+    flex: 0 1 auto;       /* Items grow to fit content but also shrink */
+    max-width: 250px;
+    width: fit-content;     
+    font-size: 1.3rem;
     font-weight: 500;
+    line-height: 2.3rem;
     color: hsl(0, 0%, 31%);
 }
 
@@ -387,19 +394,58 @@ section {
     color: #91ff00;
 }
 
-/* Problem Section */
+.content-project {
+    display: flex; /* Flexbox for sidebar and content */
+    align-items: flex-start; /* Align to the top */
+    border: 2px solid red;
+} 
+
+
+/* Sidebar */
+.sidebar-project {
+    width: 250px; /* Fixed width for sticky behavior */
+    position: sticky;
+    top: 60px; /* Distance from the top when sticky */
+    margin-right: 30px;
+    background: lightblue;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width */
+    flex-grow: 0;
+}
+
+.sidebar-project ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-project a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    line-height: 3rem;
+    font-size: 1.2rem;
+}
+
+/* Content */
 .project-part {
-    text-align: center;
-    padding: 0px ;
-    max-width: 950px;
+    flex: 1; /* Take up the remaining space */
+    padding: 20px;
+    max-width: 950px; /* Optional width cap */
+    border: 2px solid rgb(162, 0, 255);
+    box-sizing: border-box;
+}
+
+.logo-section {
+    width: fit-content;
     margin: auto;
 }
 
 .project-part h3 {
     font-weight: 700;
     text-align: left;
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 40px;
     
 }
 
@@ -428,22 +474,21 @@ section {
 }
 
 .project-part .p-left  {
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: left;
-    line-height: 1.5;
-    max-width: 500px;
+    line-height: 1.8;
+    max-width: fit-content;
     margin: 0 ;
     margin-bottom: 80px;
-    margin-top: 30px;
+    margin-top: 0;
 }
-
+/*  
 .custom-divider {
     justify-content: center ;
     display: flex;
-    border-top: 1px solid #666; /* Defines the thickness and color of the divider */
-    max-width: 950px;        /* Full width of the container */
-    margin: 100px auto;            /* Adds spacing above and below the divider */
-}
+    border-top: 1px solid #666; 
+    max-width: 950px;        
+    margin: 100px auto;      */    
 
 .dynamic-content-container {
     max-width: 950px;
