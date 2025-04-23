@@ -18,14 +18,14 @@ const projects = [
         title: "Dark Tales Magazine",
         image: "images/darktales/dt_visual.png", // Original image path
         hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
-        size: "half",
+        size: "large",
         tags: ["publication", "illustration"]
     },
     {
         title: "FloTeaing",
         image: "images/floteaing/ft_design.jpg", // Original image path
         hoverImage: "images/floteaing/ft_design_hover.jpg", // Hover image path (same size)
-        size: "large",
+        size: "half",
         tags: ["packaging"]
     },
     // Add more projects as needed...
