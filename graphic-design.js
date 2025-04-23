@@ -8,13 +8,7 @@ const projects = [
         tags: ["campaign", "branding", "poster"] // Add your tags here
     },
   
-    {
-        title: "Dark Tales Magazine",
-        image: "images/darktales/dt_visual.png", // Original image path
-        hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
-        size: "half",
-        tags: ["publication", "illustration"]
-    },
+ 
     {
         title: "FloTeaing",
         image: "images/floteaing/ft_design.jpg", // Original image path
@@ -30,6 +24,14 @@ const projects = [
         size: "large",
         tags: ["illustration"]
     },
+    /*
+    {
+        title: "Dark Tales Magazine",
+        image: "images/darktales/dt_visual.png", // Original image path
+        hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
+        size: "large",
+        tags: ["publication", "illustration"]
+    } */
     // Add more projects as needed...
 ];
 
