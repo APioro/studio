@@ -1,7 +1,7 @@
-const text = "I'm a learning UX practitioner who loves to organize things and make them ";
+const text = "I'm a UX/UI designer who loves to make things ";
 const highlightWords = [
     { text: "sensible", style: "highlight-sensible" }, 
-    { text: "creative", style: "highlight-creative" }, 
+    { text: "simple", style: "highlight-creative" }, 
     { text: "fun", style: "highlight-fun" },
     { text: "boonka", style: "highlight-boonka" },
     { text: "lizzanka", style: "highlight-lizzanka" }

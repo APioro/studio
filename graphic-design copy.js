@@ -4,7 +4,7 @@ const projects = [
         title: "Green Conceal",
         image: "images/greenconceal/gc_brochure.png", // Original image path
         hoverImage: "images/greenconceal/gc_brochureback.jpg", // Hover image path (same size)
-        size: "medium-horizontal",  // Options: 'small', 'medium', 'large'
+        size: "large",  // Options: 'small', 'medium', 'large'
         
     },
 
@@ -12,7 +12,7 @@ const projects = [
         title: "Dark Tales Magazine",
         image: "images/darktales/dt_visual.png", // Original image path
         hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
-        size: "medium-vertical",
+        size: "large",
         
     },
 
@@ -21,7 +21,7 @@ const projects = [
         title: "FloTeaing",
         image: "images/floteaing/ft_design.jpg", // Original image path
         hoverImage: "images/floteaing/ft_design_hover.jpg", // Hover image path (same size)
-        size: "medium-vertical",
+        size: "half",
        
     },
 
@@ -29,7 +29,7 @@ const projects = [
         title: "Degree Show Proposal",
         image: "images/degreeshow/ds_concept.png",
         hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
-        size: "large"
+        size: "half"
        
     },
     // Add more projects as needed...

@@ -5,6 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: #eeeeee;
 }
 
 header {
@@ -21,7 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f7f7f7;
+    background-color: #eeeeee;
     height: 20px; /* Set a fixed height */
 }
 
@@ -105,15 +106,22 @@ section {
     flex-direction: column;
     gap: 20px; /* Space between sections */
     max-width: 76vw;
-    margin: 40px auto 140px auto;
+    margin: 100px auto 140px auto;
 }
+
+
+.project-details h2{
+    margin-top: 0;
+}
+
+
 
 .project-info {
     display: flex;
     flex: 1 1 200px;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: space-between;
-    gap: 70px; /* Space between items */
+    gap: 100px; /* Space between items */
     max-width: 70vw;
     margin-top: 60px;
 }
@@ -123,9 +131,9 @@ section {
     flex: 0 1 auto;       /* Items grow to fit content but also shrink */
     max-width: 250px;
     width: fit-content;     
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 2.3rem;
+    line-height: 2rem;
     color: hsl(0, 0%, 31%);
 }
 
@@ -256,10 +264,12 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
+    width: 100%; /* Full container width */
+    grid-auto-rows: 1fr; /* Ensures equal height for items */
     
 }
 
@@ -272,6 +282,7 @@ section {
 
 /* Tile Styles */
 .grid-item {
+    width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 0px; /* Rounded corners */
@@ -283,10 +294,13 @@ section {
 
 .grid-item img {
     width: 100%;
-    height: auto;
+    height: auto;     /* this keeps the aspect ratio */
+    max-height: 100vh; 
     display: block;
     border-radius: 0px; /* Match the border-radius of the tile */
     object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
 }
 
 .grid-item h2 {
@@ -308,6 +322,7 @@ section {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    cursor: pointer;
     
 }
 
@@ -328,24 +343,12 @@ section {
 /* Classes for different sizes of items */
 .grid-item.large {
     grid-column: span 2; /* Span 2 columns */
-    grid-row: span 2;    /* Span 2 rows */
 }
 
-.grid-item.medium-vertical {
+.grid-item.half {
     grid-column: span 1; /* Span 1 column */
-    grid-row: span 2;    /* Span 2 row */
 }
 
-.grid-item.medium-horizontal {
-    grid-column: span 2; /* Span 1 column */
-    grid-row: span 1;    /* Span 2 row */
-}
-
-
-.grid-item.small {
-    grid-column: span 1; /* Span 1 column */
-    grid-row: span 1;    /* Span 1 row */
-}
 /* Container centered vertically and horizontally */
 #intro-container {
     display: flex;
@@ -358,9 +361,10 @@ section {
 /* Text block */
 #typing-text {
     font-size: 6rem; /* Adjust text size */
-    max-width: 900px; /* Constrain the block width */
+    font-weight: 700;
+    max-width: 1200px; /* Constrain the block width */
     width: 100%; /* Make it responsive */
-    line-height: 1.5; /* Space between lines */
+    line-height: 1.4; /* Space between lines */
     text-align: left; /* Text starts from the left */
     white-space: pre-wrap; /* Ensure text wraps to the next line */
 }
@@ -397,18 +401,17 @@ section {
 .content-project {
     display: flex; /* Flexbox for sidebar and content */
     align-items: flex-start; /* Align to the top */
-    border: 2px solid red;
 } 
 
 
 /* Sidebar */
 .sidebar-project {
-    width: 250px; /* Fixed width for sticky behavior */
+    
+    width: 300px; /* Fixed width for sticky behavior */
     position: sticky;
     top: 60px; /* Distance from the top when sticky */
     margin-right: 30px;
-    background: lightblue;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box; /* Include padding in width */
     flex-grow: 0;
 }
@@ -421,18 +424,34 @@ section {
 
 .sidebar-project a {
     text-decoration: none;
-    color: black;
+    color: rgb(102, 102, 102);
     padding: 20px;
     line-height: 3rem;
     font-size: 1.2rem;
+    padding: 0;
 }
+
+.sidebar-project a:hover {
+    color: black;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.sidebar-project a.active {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+
+}
+
+
+
+
 
 /* Content */
 .project-part {
     flex: 1; /* Take up the remaining space */
     padding: 20px;
     max-width: 950px; /* Optional width cap */
-    border: 2px solid rgb(162, 0, 255);
     box-sizing: border-box;
 }
 
@@ -440,12 +459,29 @@ section {
     width: fit-content;
     margin: auto;
 }
-
-.project-part h3 {
+.project-part h1 {
     font-weight: 700;
     text-align: left;
-    font-size: 3rem;
-    margin-bottom: 40px;
+    font-size: 3.6rem;
+    margin-bottom: 30px;
+    margin-top: 0;
+    
+}
+
+.project-part h3 {
+    font-weight: 500;
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+.project-part h4 {
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top: 0;
     
 }
 
@@ -474,13 +510,75 @@ section {
 }
 
 .project-part .p-left  {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: left;
     line-height: 1.8;
     max-width: fit-content;
     margin: 0 ;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     margin-top: 0;
+}
+
+  .project-part  li {
+    margin-bottom: 16px;
+    list-style-position: outside;
+  }
+
+  .project-part  img {
+   max-width: 800px;
+  }
+
+
+.content-tile-top {
+    display: flex;
+    align-items: center;
+    background-color: #dfdbd3;
+    border-radius: 20px 20px 0px 0px;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8;
+    padding: 36px;
+    margin-bottom: 10px;  
+    
+}
+
+.inner-container-50 {
+    flex:1 1 0px;
+    width: 0;
+    
+}
+.header-and-icon{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    gap:20px;
+}
+
+.content-tile-middle {
+    display: flex;
+    align-items: center;
+    background-color: #dfdbd3;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8;
+    padding: 36px;
+    margin-bottom: 10px;
+
+}
+.content-tile-bottom {
+    display: flex;
+    align-items: center;
+    background-color: #dfdbd3;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8;
+    padding: 36px;
+    margin-bottom: 140px;
+
+}
+.content-tile p {
+    margin:0;
 }
 /*  
 .custom-divider {
@@ -499,6 +597,8 @@ section {
     gap: 20px;
 }
 
+/* dynamic container is a wrapper */
+
 .dynamic-content-container > div {
     flex: 0 0 300px; /* Fixed width of 300px */
     display: flex;
@@ -508,10 +608,12 @@ section {
 }
 
 .dynamic-content-container div img {
-    width: 100%; /* Ensures the image takes up full width of the container */
+    width: 160%; /* Ensures the image takes up full width of the container */
     height: auto; /* Keeps the image aspect ratio */
     max-width: 900px; /* Locks the image width to 300px */
 }
+
+
 /*
 /* Speech container adjustments */
 .speech-container {
