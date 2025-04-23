@@ -7,18 +7,12 @@ const projects = [
         size: "large",  // Options: 'small', 'medium', 'large'
         tags: ["campaign", "branding", "poster"] // Add your tags here
     },
-    {
-        title: "Degree Show Proposal",
-        image: "images/degreeshow/ds_concept.png",
-        hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
-        size: "half",
-        tags: ["illustration"]
-    },
+  
     {
         title: "Dark Tales Magazine",
         image: "images/darktales/dt_visual.png", // Original image path
         hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
-        size: "large",
+        size: "half",
         tags: ["publication", "illustration"]
     },
     {
@@ -27,6 +21,14 @@ const projects = [
         hoverImage: "images/floteaing/ft_design_hover.jpg", // Hover image path (same size)
         size: "half",
         tags: ["packaging"]
+    },
+
+    {
+        title: "Degree Show Proposal",
+        image: "images/degreeshow/ds_concept.png",
+        hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
+        size: "large",
+        tags: ["illustration"]
     },
     // Add more projects as needed...
 ];
