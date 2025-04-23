@@ -11,14 +11,14 @@ const projects = [
         title: "Degree Show Proposal",
         image: "images/degreeshow/ds_concept.png",
         hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
-        size: "small",
+        size: "half",
         tags: ["illustration"]
     },
     {
         title: "Dark Tales Magazine",
         image: "images/darktales/dt_visual.png", // Original image path
         hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
-        size: "medium",
+        size: "half",
         tags: ["publication", "illustration"]
     },
     {
