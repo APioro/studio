@@ -265,7 +265,7 @@ section {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 50px;
     max-width: 100%;
     margin: 0 auto;
     width: 100%; /* Full container width */
@@ -354,7 +354,7 @@ section {
     display: flex;
     justify-content: center; /* Horizontally center the block */
     /* align-items: center; Vertically center the block */
-    height: 100vh; /* Full viewport height */
+    height: 40vh; /* Full viewport height */
     padding: 20px;
 }
 

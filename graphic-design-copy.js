@@ -1,16 +1,16 @@
 // Example data for graphic design projects
 const projects = [
     {
-        title: "Green Conceal",
-        image: "images/greenconceal/gc_brochure.png", // Original image path
+        title: "Absolute Collagen",
+        image: "images/absolute-collagen/form (6).png", // Original image path
         hoverImage: "images/greenconceal/gc_brochureback.jpg", // Hover image path (same size)
         size: "large",  // Options: 'small', 'medium', 'large'
         
     },
 
     {
-        title: "Dark Tales Magazine",
-        image: "images/darktales/dt_visual.png", // Original image path
+        title: "New",
+        image: "images/new/placeholder-1.jpg", // Original image path
         hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
         size: "half",
         
@@ -18,16 +18,16 @@ const projects = [
 
   
     {
-        title: "FloTeaing",
-        image: "images/floteaing/ft_design.jpg", // Original image path
+        title: "Darker Tales",
+        image: "images/darktales/into-page.jpg", // Original image path
         hoverImage: "images/floteaing/ft_design_hover.jpg", // Hover image path (same size)
         size: "half",
        
     },
 
     {
-        title: "Degree Show Proposal",
-        image: "images/degreeshow/ds_concept.png",
+        title: "Power of the myth",
+        image: "images/book-power-of-the-myth/books mock up.jpg",
         hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
         size: "large"
        
