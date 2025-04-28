@@ -5,6 +5,7 @@ const projects = [
         image: "images/absolute-collagen/form (6).png", // Original image path
         hoverImage: "images/greenconceal/gc_brochureback.jpg", // Hover image path (same size)
         size: "large",  // Options: 'small', 'medium', 'large'
+        link: "https://example.com/absolute-collagen",
         
     },
 
@@ -13,6 +14,7 @@ const projects = [
         image: "images/new/placeholder-1.jpg", // Original image path
         hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
         size: "half",
+        link: "https://google.com",
         
     },
 
@@ -22,6 +24,7 @@ const projects = [
         image: "images/darktales/into-page.jpg", // Original image path
         hoverImage: "images/floteaing/ft_design_hover.jpg", // Hover image path (same size)
         size: "half",
+        link: "darker-tales/darker-tales.html",
        
     },
 
@@ -29,7 +32,8 @@ const projects = [
         title: "Power of the myth",
         image: "images/book-power-of-the-myth/books mock up.jpg",
         hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
-        size: "large"
+        size: "large",
+         link: "https://example.com/absolute-collagen",
        
     },
     // Add more projects as needed...
@@ -49,6 +53,10 @@ function createTiles() {
         img.alt = project.title;
         img.loading = "lazy"; // Add lazy loading
 
+        const link = document.createElement("a");
+        link.href = project.link;
+        link.target = "_blank";
+
         const overlay = document.createElement("div");
         overlay.setAttribute("class","overlay");
         
@@ -59,9 +67,11 @@ function createTiles() {
          
 
         // Append image, title, and tags to the grid item
-        gridItem.appendChild(img);
         overlay.appendChild(overlayText);
-        gridItem.appendChild(overlay);
+        link.appendChild(img);         // Image inside the link
+        link.appendChild(overlay);     // Overlay inside the link
+        gridItem.appendChild(link);
+        
 
    
 
