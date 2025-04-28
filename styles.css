@@ -17,7 +17,7 @@ header {
 }
 
 footer {
-
+    display: flex;
     background-color: #dbd5db;
     z-index: 1000;
     width: 100%;
@@ -25,9 +25,15 @@ footer {
     
 }
 
+footer h2 {
+    margin: 0.8rem;
+    font-size: 2.125rem;
+    
+}
+
 a {
+    cursor: pointer;
     display: block;
-    text-decoration: none; /* remove ugly underline */
     color: inherit; /* inherit text color (if text inside link) */
   }
 
@@ -42,6 +48,7 @@ a {
 }
 
 .logo {
+    padding-right: 8rem;
     font-size: 1.3rem;   
     font-weight: 700;  
     letter-spacing: 0.05rem; 
@@ -74,7 +81,7 @@ a {
 }
 
 section {
-    padding: 100px 20px;
+    padding: 100px 2.6rem;
     text-align: left;  /* Align text to the left */
 }
 
@@ -215,72 +222,12 @@ section {
     background-color: #fff;    /* White background for case studies */
 }
 
-/* Style for the tags container */
-.tags-container {
-    display: flex;               /* Align tags in a row */
-    flex-wrap: wrap;            /* Wrap tags to next line if needed */
-    gap: 5px;                   /* Space between tags */
-    margin-top: 10px;           /* Space above tags */
-}
 
-/* Individual tag styles */
-.tag {
-    display: inline-block;          /* Makes the element inline with padding */
-    background-color: #000;        /* Default black background */
-    color: #fff;                   /* White text */
-    padding: 5px 10px;             /* Padding around the text */
-    border-radius: 15px;           /* Rounded corners */
-    font-size: 12px;               /* Font size for tags */
-    font-weight: 500;              /* Medium weight for better visibility */
-}
-.tag-cloud-wrapper {
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */
-    margin-top: 30px;
-  
-}
-
-.tag-cloud {
-    display: flex;
-    flex-direction: column;   /* Aligns the tags vertically */
-    gap: 20px;                /* Space between tags */
-    align-items: center;      /* Center the tags horizontally */
-}
-
-/* Change tag colors for specific tags */
-.tag:nth-child(1) {
-    background-color: #690627; /* Blue for first tag */
-}
-
-.tag:nth-child(2) {
-    background-color: #b10058; /* Green for second tag */
-}
-
-.tag:nth-child(3) {
-    background-color: #996211; /* Orange for third tag */
-}
-
-.tag:nth-child(4) {
-    background-color: #996211; /* Brown for fourth tag */
-}
-
-.tagblack {
-    display: flex; 
-    justify-content: center; 
-    width: fit-content;        /* Makes the element inline with padding */
-    background-color: #000;        /* Default black background */
-    color: #fff;                   /* White text */
-    padding: 8px 14px;             /* Padding around the text */
-    border-radius: 15px;           /* Rounded corners */
-    font-size: 14px;               /* Font size for tags */
-    font-weight: 500;              /* Medium weight for better visibility */
-}
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 2.6rem;
     max-width: 100%;
     margin: 0 auto;
     width: 100%; /* Full container width */
@@ -315,7 +262,7 @@ section {
     border-radius: 0px; /* Match the border-radius of the tile */
     object-fit: cover;
     object-position: 50% 50%;
-    cursor: pointer;
+    
 }
 
 .grid-item h2 {
@@ -325,7 +272,7 @@ section {
 }
 
 
-.grid-item .overlay {
+/*.grid-item .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -350,6 +297,7 @@ section {
     font-size: 24px;
     font-weight: bold;
 }
+    */
 
 .project-description-graphic-design {
     font-size: 1.5rem;
@@ -368,10 +316,11 @@ section {
 
 }
 
-/* Hover Effect */
+/* Hover Effect 
 .grid-item:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
+    transform: scale(1.05); }
+*/
+
 /* Classes for different sizes of items */
 .grid-item.large {
     grid-column: span 2; /* Span 2 columns */

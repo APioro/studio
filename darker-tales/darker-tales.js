@@ -13,12 +13,12 @@ const projects = [
 
   
     {
-        image: "afterlife.jpg", // Original image path
+        image: "darker-tales-afterlife-bigger.jpg", // Original image path
         size: "half",
     },
 
     {
-        image: "darker-tales-many-spreads.jpg",
+        image: "back-side.jpg",
         size: "large", 
     },
     // Add more projects as needed...
@@ -36,10 +36,6 @@ function createTiles() {
         const img = document.createElement("img"); 
         img.src = project.image; // Original image
         img.loading = "lazy"; // Add lazy loading
-
-        const link = document.createElement("a");
-        link.href = project.link;
-        link.target = "_blank";
          
 
         // Append image, title, and tags to the grid item

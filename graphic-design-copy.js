@@ -3,7 +3,6 @@ const projects = [
     {
         title: "Absolute Collagen",
         image: "images/absolute-collagen/form (6).png", // Original image path
-        hoverImage: "images/greenconceal/gc_brochureback.jpg", // Hover image path (same size)
         size: "large",  // Options: 'small', 'medium', 'large'
         link: "https://example.com/absolute-collagen",
         
@@ -12,7 +11,6 @@ const projects = [
     {
         title: "New",
         image: "images/new/placeholder-1.jpg", // Original image path
-        hoverImage: "images/darktales/dt_visual_hover.png", // Hover image path (same size)
         size: "half",
         link: "https://google.com",
         
@@ -21,8 +19,7 @@ const projects = [
   
     {
         title: "Darker Tales",
-        image: "images/darktales/into-page.jpg", // Original image path
-        hoverImage: "images/floteaing/ft_design_hover.jpg", // Hover image path (same size)
+        image: "darker-tales/darker-tales-afterlife-bigger.jpg", // Original image path
         size: "half",
         link: "darker-tales/darker-tales.html",
        
@@ -31,9 +28,8 @@ const projects = [
     {
         title: "Power of the myth",
         image: "images/book-power-of-the-myth/books mock up.jpg",
-        hoverImage: "images/degreeshow/ds_concept_hover.png", // Hover image path (same size)
         size: "large",
-         link: "https://example.com/absolute-collagen",
+        link: "https://example.com/absolute-collagen",
        
     },
     // Add more projects as needed...
@@ -57,19 +53,9 @@ function createTiles() {
         link.href = project.link;
         link.target = "_blank";
 
-        const overlay = document.createElement("div");
-        overlay.setAttribute("class","overlay");
-        
-        const overlayText = document.createElement("div");
-        overlayText.setAttribute("class","text");
-
-        overlayText.innerText=project.title;
-         
 
         // Append image, title, and tags to the grid item
-        overlay.appendChild(overlayText);
         link.appendChild(img);         // Image inside the link
-        link.appendChild(overlay);     // Overlay inside the link
         gridItem.appendChild(link);
         
 
