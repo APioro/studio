@@ -22,6 +22,7 @@ footer {
     z-index: 1000;
     width: 100%;
     padding: 3.125rem;
+    
 }
 
 a {
@@ -353,14 +354,17 @@ section {
 .project-description-graphic-design {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-left: 3.125rem;
+    padding-left: 8rem;
+    width: 40%;
+    padding-bottom: 8.125rem;
 
 }
 
 .project-title-graphic-design {
     font-size: 3rem;
     font-weight: bold;
-    padding-left: 3.125rem;
+    padding-left: 8rem;
+    padding-bottom: 1.4rem;
 
 }
 
