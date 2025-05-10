@@ -10,7 +10,7 @@ const projects = [
 
     {
         title: "New",
-        image: "images/packaging/wands.png", // Original image path
+        image: "images/packagaing/wands.png", // Original image path
         size: "half",
         link: "https://google.com",
         
