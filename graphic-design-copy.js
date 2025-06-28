@@ -9,10 +9,10 @@ const projects = [
     },
 
     {
-        title: "New",
-        image: "images/packagaing/wands.png", // Original image path
+        title: "Packaging",
+        image: "packaging/cups-three-pink-closeup.jpg", // Original image path
         size: "half",
-        link: "https://google.com",
+        link: "packaging/packaging.html",
         
     },
 

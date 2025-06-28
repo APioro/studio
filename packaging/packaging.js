@@ -20,13 +20,13 @@ const projects = [
 
   
     {
-        image: "darker-tales-afterlife-bigger.jpg", // Original image path
+        image: "wands-with-plants.jpg", // Original image path
         size: "half",
     },
 
     {
-        image: "back-side.jpg",
-        size: "large", 
+        image: "wands-illustration.jpg",
+        size: "half", 
     },
     // Add more projects as needed...
 ];
