@@ -156,6 +156,27 @@ a {
 /*for js lightbox(large image ) effect */
 
 #lightboxOverlay {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;                /* full viewport height */
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;               /* make sure it’s above everything */
+  
+  /* Fix stacking and rendering bugs on mobile Firefox */
+  transform: translateZ(0);
+  contain: strict;
+
+  /* Enable smooth scrolling if content overflows */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Start hidden, for your fade-in */
   opacity: 0;
   transition: opacity 0.35s ease;
 }
