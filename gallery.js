@@ -2,7 +2,7 @@ const mediaItems = [
   { type: "image", title: "Catalogue", file: "labs/degree-show-catalogue.jpg" },
   { type: "video", title: "Blender animation", file: "labs/blender-animation.mp4" },
   { type: "image", title: "Power of the myth book cover", file: "labs/book-far.jpg" },
-    { type: "image", title: "Power of the myth", file: "labs/book-closeup.jpg" },
+  { type: "image", title: "Power of the myth", file: "labs/book-closeup.jpg" },
   { type: "image", title: "Degree Show", file: "labs/overlap.jpg" }, // example video
   { type: "image", title: "Shrine", file: "labs/shrine.jpg" }
 ];
@@ -36,14 +36,16 @@ mediaItems.forEach(item => {
   galleryInner.appendChild(div);
 });
 
-// Drag scroll (same as before)
+// Drag scroll (fixed to suppress click after drag)
 const container = document.getElementById('gallery');
 let isDown = false;
 let startX;
 let scrollLeft;
+let isDragging = false; // <--- add this flag
 
 container.addEventListener('mousedown', (e) => {
   isDown = true;
+  isDragging = false;    // reset flag at drag start
   startX = e.pageX - container.offsetLeft;
   scrollLeft = container.scrollLeft;
 });
@@ -54,12 +56,21 @@ container.addEventListener('mousemove', (e) => {
   e.preventDefault();
   const x = e.pageX - container.offsetLeft;
   const walk = (x - startX) * 1;
+
+  if (Math.abs(walk) > 5) {  // if moved enough, count as dragging
+    isDragging = true;
+  }
+
   container.scrollLeft = scrollLeft - walk;
 });
 
-// Lightbox functionality
+// Lightbox functionality (skip click if dragging)
 galleryInner.addEventListener('click', (e) => {
-  // Find clicked media element (image or video)
+  if (isDragging) {
+    isDragging = false;  // reset flag and ignore click after drag
+    return;
+  }
+
   const target = e.target;
   if (!(target.tagName === 'IMG' || target.tagName === 'VIDEO')) return;
 
@@ -91,7 +102,7 @@ galleryInner.addEventListener('click', (e) => {
     largeVideo.src = target.src;
     largeVideo.autoplay = true;
     largeVideo.loop = true;
-    largeVideo.muted = true; // muted to allow autoplay without user interaction
+    largeVideo.muted = true;
     largeVideo.controls = true;
     largeVideo.style.maxWidth = '90%';
     largeVideo.style.maxHeight = '90%';
@@ -102,7 +113,7 @@ galleryInner.addEventListener('click', (e) => {
 
   document.body.appendChild(overlay);
 
-  // Animate fade in (optional, if you have CSS from before)
+  // Animate fade in (optional)
   requestAnimationFrame(() => {
     overlay.classList.add('visible');
   });
