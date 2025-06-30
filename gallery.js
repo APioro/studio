@@ -1,24 +1,42 @@
-const images = [
-  { title: "Forest Path", file: "labs/degree-show-catalogue.jpg" },
-  { title: "Ocean View", file: "labs/book-closeup.jpg" },
-  { title: "Mountain Sky", file: "labs/book-far.jpg" },
-  { title: "Desert Light", file: "moonbun/moonbun-logo-black-square.jpg" },
-{ title: "Desert Light", file: "moonbun/moonbun-logo-black-square.jpg" }
+const mediaItems = [
+  { type: "image", title: "Catalogue", file: "labs/degree-show-catalogue.jpg" },
+  { type: "video", title: "Blender animation", file: "labs/blender-animation.mp4" },
+  { type: "image", title: "Power of the myth book cover", file: "labs/book-far.jpg" },
+    { type: "image", title: "Power of the myth", file: "labs/book-closeup.jpg" },
+  { type: "image", title: "Degree Show", file: "labs/overlap.jpg" }, // example video
+  { type: "image", title: "Shrine", file: "labs/shrine.jpg" }
 ];
 
 const galleryInner = document.getElementById('galleryInner');
 
-images.forEach(img => {
+mediaItems.forEach(item => {
   const div = document.createElement('div');
   div.className = 'gallery-item';
-  div.innerHTML = `
-    <img src="${img.file}" alt="${img.title}">
-    <div class="title">${img.title}</div>
-  `;
+
+  if (item.type === "image") {
+    div.innerHTML = `
+      <img src="${item.file}" alt="${item.title}">
+      <div class="title">${item.title}</div>
+    `;
+  } else if (item.type === "video") {
+    div.innerHTML = `
+      <video 
+        src="${item.file}" 
+        muted 
+        loop 
+        playsinline 
+        autoplay
+        preload="metadata"
+        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;">
+      </video>
+      <div class="title">${item.title}</div>
+    `;
+  }
+
   galleryInner.appendChild(div);
 });
 
-// Optional drag scroll
+// Drag scroll (same as before)
 const container = document.getElementById('gallery');
 let isDown = false;
 let startX;
@@ -29,15 +47,8 @@ container.addEventListener('mousedown', (e) => {
   startX = e.pageX - container.offsetLeft;
   scrollLeft = container.scrollLeft;
 });
-
-container.addEventListener('mouseleave', () => {
-  isDown = false;
-});
-
-container.addEventListener('mouseup', () => {
-  isDown = false;
-});
-
+container.addEventListener('mouseleave', () => { isDown = false; });
+container.addEventListener('mouseup', () => { isDown = false; });
 container.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
@@ -46,8 +57,11 @@ container.addEventListener('mousemove', (e) => {
   container.scrollLeft = scrollLeft - walk;
 });
 
+// Lightbox functionality
 galleryInner.addEventListener('click', (e) => {
-  if (e.target.tagName !== 'IMG') return;
+  // Find clicked media element (image or video)
+  const target = e.target;
+  if (!(target.tagName === 'IMG' || target.tagName === 'VIDEO')) return;
 
   const overlay = document.createElement('div');
   overlay.id = 'lightboxOverlay';
@@ -63,27 +77,38 @@ galleryInner.addEventListener('click', (e) => {
   overlay.style.cursor = 'pointer';
   overlay.style.zIndex = 1000;
 
-  const largeImg = document.createElement('img');
-  largeImg.src = e.target.src;
-  largeImg.alt = e.target.alt || '';
-  largeImg.style.maxWidth = '90%';
-  largeImg.style.maxHeight = '90%';
-  largeImg.style.borderRadius = '8px';
-  largeImg.style.cursor = 'auto';
+  if (target.tagName === 'IMG') {
+    const largeImg = document.createElement('img');
+    largeImg.src = target.src;
+    largeImg.alt = target.alt || '';
+    largeImg.style.maxWidth = '90%';
+    largeImg.style.maxHeight = '90%';
+    largeImg.style.borderRadius = '8px';
+    largeImg.style.cursor = 'auto';
+    overlay.appendChild(largeImg);
+  } else if (target.tagName === 'VIDEO') {
+    const largeVideo = document.createElement('video');
+    largeVideo.src = target.src;
+    largeVideo.autoplay = true;
+    largeVideo.loop = true;
+    largeVideo.muted = true; // muted to allow autoplay without user interaction
+    largeVideo.controls = true;
+    largeVideo.style.maxWidth = '90%';
+    largeVideo.style.maxHeight = '90%';
+    largeVideo.style.borderRadius = '8px';
+    largeVideo.style.cursor = 'auto';
+    overlay.appendChild(largeVideo);
+  }
 
-  overlay.appendChild(largeImg);
   document.body.appendChild(overlay);
 
-  // Trigger CSS transition by adding visible class on next frame
+  // Animate fade in (optional, if you have CSS from before)
   requestAnimationFrame(() => {
     overlay.classList.add('visible');
   });
 
   overlay.addEventListener('click', () => {
-    // Start fade-out by removing visible class
     overlay.classList.remove('visible');
-
-    // Wait for transition to finish before removing from DOM
     overlay.addEventListener('transitionend', () => {
       overlay.remove();
     }, { once: true });
