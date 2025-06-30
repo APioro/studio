@@ -135,6 +135,20 @@ a {
   display: block;
 }
 
+.gallery-item img,
+.gallery-item video {
+  user-drag: none;          /* Safari */
+  -webkit-user-drag: none;  /* Safari */
+  -moz-user-drag: none;     /* Firefox */
+  -ms-user-drag: none;      /* IE/Edge */
+  pointer-events: auto;     /* Keep clickable */
+  user-select: none;        /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
 .title {
   display: none;
 }
