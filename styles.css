@@ -8,6 +8,10 @@ body {
     background-color: #eeeeee;
 }
 
+body.lightbox-open {
+  overflow: hidden;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -34,7 +38,12 @@ footer h2 {
 a {
     cursor: pointer;
     display: block;
-    color: inherit; /* inherit text color (if text inside link) */
+    color: inherit; 
+  }
+
+
+  a .logo{
+    text-decoration: none;
   }
 
 .navbar {
@@ -48,6 +57,7 @@ a {
 }
 
 .logo {
+    text-decoration: none;
     padding-right: 8rem;
     font-size: 1.3rem;   
     font-weight: 700;  
@@ -64,9 +74,10 @@ a {
 }
 
 .nav-list li a {
+    font-size: 1.3rem;
     text-decoration: none;
     color: rgb(15, 15, 15);
-    font-weight: 500;
+    font-weight: 800;
     transition: color 0.3s ease;
 }
 
@@ -80,6 +91,70 @@ a {
     color: #996211;
 }
 
+/*Gallery (labs) index page*/
+
+.gallery-container {
+  margin-top:0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+.gallery {
+  display: flex;
+  gap: 16px;
+}
+
+.gallery-item {
+  flex: 0 0 calc((100% / 3.3) - 12px); /* 4 items per view with spacing */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.title {
+  display: none;
+}
+
+/*for js lightbox(large image ) effect */
+
+#lightboxOverlay {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+#lightboxOverlay.visible {
+  opacity: 1;
+}
+
+#lightboxOverlay img {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+#lightboxOverlay.visible img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/*end of gallery*/
 section {
     padding: 100px 2.6rem;
     text-align: left;  /* Align text to the left */
@@ -272,6 +347,7 @@ section {
 }
 
 
+
 /*.grid-item .overlay {
     position: absolute;
     top: 0;
@@ -299,6 +375,24 @@ section {
 }
     */
 
+.project-title-index {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1.4rem;
+    padding-top: 6rem;
+    padding-left: 3rem;
+
+}
+
+.text-index {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 3rem;
+    padding-bottom: 2.4rem;
+;
+   
+
+}
 .project-description-graphic-design {
     font-size: 1.5rem;
     font-weight: bold;

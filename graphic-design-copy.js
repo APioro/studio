@@ -16,22 +16,23 @@ const projects = [
         
     },
 
-  
     {
-        title: "Darker Tales",
-        image: "darker-tales/darker-tales-afterlife-bigger.jpg", // Original image path
+        title: "Moon Bun Coffee Shop",
+        image: "moonbun/moonbun-logo-black-square.jpg", // Original image path
         size: "half",
         link: "darker-tales/darker-tales.html",
        
     },
 
     {
-        title: "Power of the myth",
-        image: "images/book-power-of-the-myth/books mock up.jpg",
+        title: "Darker Tales",
+        image: "darker-tales/darker-tales-afterlife-bigger.jpg", // Original image path
         size: "large",
-        link: "https://example.com/absolute-collagen",
+        link: "darker-tales/darker-tales.html",
        
     },
+
+  
     // Add more projects as needed...
 ];
 
