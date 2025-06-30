@@ -24,7 +24,6 @@ footer {
     display: flex;
     background-color: #dbd5db;
     z-index: 1000;
-    width: 100%;
     padding: 3.125rem;
     
 }
@@ -110,6 +109,15 @@ a {
 .gallery {
   display: flex;
   gap: 16px;
+}
+
+.gallery-item {
+  flex: 0 0 calc((100% / 3.3) - 12px); /* 4 items per view with spacing */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
 }
 
 .gallery-item {
