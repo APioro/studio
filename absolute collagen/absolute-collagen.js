@@ -9,7 +9,7 @@ const projects = [
         size: "half",
     },
     {
-        image: "ac-old-vs-new.jpg", // Original image path
+        image: "ac-old-vs-new.png", // Original image path
         size: "large",
     },
     {
@@ -47,7 +47,6 @@ function createTiles() {
             media.playsInline = true;
             media.loading = "lazy";
             media.style.width = "100%";
-            media.style.height = "100%";
             media.style.objectFit = "cover";
         } else {
             // Create image element
