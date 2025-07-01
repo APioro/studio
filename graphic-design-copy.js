@@ -4,7 +4,7 @@ const projects = [
         title: "Absolute Collagen",
         image: "/absolute collagen/ac-mockup-far.jpg", // Original image path
         size: "large",  // Options: 'small', 'medium', 'large'
-        link: "https://example.com/absolute-collagen",
+        link: "absolute collagen/absolute-collagen.html",
         
     },
 
