@@ -146,8 +146,16 @@ a {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+
+   transition: transform 0.3s ease;
+  will-change: transform;
+  
 }
 
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.03);
+}
 
 .title {
   display: none;
@@ -383,6 +391,17 @@ section {
     
 }
 
+.grid-item img,
+.grid-item video {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.grid-item:hover img,
+.grid-item:hover video {
+  transform: scale(1.03);
+}
+
 .grid-item h2 {
     font-size: 1.5rem;            /* Size for the title */
     margin: 10;                    /* Remove default margins */
@@ -478,7 +497,7 @@ section {
 
 /* Text block */
 #typing-text {
-    font-size: 6rem; /* Adjust text size */
+    font-size: 6.5rem; /* Adjust text size */
     font-weight: 700;
     max-width: 1200px; /* Constrain the block width */
     width: 100%; /* Make it responsive */
