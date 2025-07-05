@@ -1,31 +1,31 @@
 const projects = [
   {
     title: "Absolute Collagen",
-    category: "Branding",
+    category: "UX/UI Design, E-commerce",
     image: "/absolute collagen/ac-mockup-far.jpg",
     size: "large",
     link: "absolute collagen/absolute-collagen.html",
     theme: "dark" // white text
   },
   {
-    title: "Packaging",
-    category: "Packaging",
+    title: "The Suits Series",
+    category: "Packaging, Branding",
     image: "packaging/cups-three-pink-closeup.jpg",
     size: "half",
     link: "packaging/packaging.html",
     theme: "light" // black text
   },
   {
-    title: "Moon Bun Coffee Shop",
-    category: "Logo Design",
+    title: "MoonBun Coffee Shop",
+    category: "Branding",
     image: "moonbun/moonbun-logo-black-square.jpg",
     size: "half",
     link: "moonbun/moonbun.html",
     theme: "light"
   },
   {
-    title: "Darker Tales",
-    category: "Book Design",
+    title: "Darker Tales ",
+    category: "Editorial, Illustration",
     image: "darker-tales/darker-tales-afterlife-bigger.jpg",
     size: "large",
     link: "darker-tales/darker-tales.html",

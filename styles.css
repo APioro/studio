@@ -541,16 +541,32 @@ section {
     font-weight: bold;
     padding-left: 3rem;
     padding-bottom: 2.4rem;
-;
+}
    
+.project-info-container {
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 8.125rem;
+    gap:6rem;
+    
+}
+
+
+.project-description-graphic-design {
+    line-height: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+   flex: 1;
+    
+    
 
 }
-.project-description-graphic-design {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-left: 8rem;
-    width: 40%;
-    padding-bottom: 8.125rem;
+
+.project-description-graphic-design b{
+
+    font-weight: 900;
 
 }
 
