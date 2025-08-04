@@ -52,6 +52,7 @@ function createTiles() {
 
     const link = document.createElement("a");
     link.href = project.link;
+    link.target = "_blank";
     link.appendChild(img);
 
     // Create overlay
