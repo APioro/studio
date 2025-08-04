@@ -495,13 +495,8 @@ section {
     border-radius: 0px; /* Rounded corners */
     transition: transform 0.3s;
     background-color: transparent; /* Placeholder background */
-
-    opacity: 0;
-    transition: opacity 0.8s ease-out;
-}
-
-.grid-item.visible {
-    opacity: 1;
+    
+    
 }
 
 .grid-item img,
