@@ -3,7 +3,8 @@ const highlightWords = [
     { text: "functional", style: "highlight-sensible" }, 
     { text: "suprising", style: "highlight-creative" }, 
     { text: "fun", style: "highlight-fun" },
- 
+    { text: "boonka", style: "highlight-boonka" },
+    { text: "lizzanka", style: "highlight-lizzanka" }
 ]; 
 let currentHighlightWordIndex = 0;
 let index = 0;
