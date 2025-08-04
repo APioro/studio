@@ -61,5 +61,7 @@ function createTiles() {
     });
 }
 
-// Call the function to create tiles
-createTiles();
+document.addEventListener("DOMContentLoaded", () => {
+    createTiles();
+
+});

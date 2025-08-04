@@ -1,4 +1,5 @@
-// PHOTOES FOR DARKER TALES PROJECT
+
+  // PHOTOES FOR DARKER TALES PROJECT
 const projects = [
     {
         image: "darker-tales-many-spreads.jpg", // Original image path
@@ -13,7 +14,7 @@ const projects = [
 
   
     {
-        image: "darker-tales-afterlife-bigger.jpg", // Original image path
+        image: "table-of-content.png", // Original image path
         size: "half",
     },
 
@@ -47,3 +48,6 @@ function createTiles() {
 
 // Call the function to create tiles
 createTiles();
+
+
+
