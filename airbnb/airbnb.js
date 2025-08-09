@@ -12,14 +12,36 @@ const projects = [
             <br><br>
                 Airbnb Circles is a new system that organizes experiences, hosts, and travelers into emotionally resonant identity “clubs” called Circles.
                 Each Circle—like Dark Enclave, Glam Squad, or Soulful Seeker—represents a distinct aesthetic and lifestyle, helping users find their people and their vibe wherever they go.<br><br>
-           
+           Instead of choosing from generic filters like “Food & Drink” or “Arts,” users take a short quiz to join a Circle and unlock curated travel content, events, and meetups that match their personality.<br><br>
+        This transforms Airbnb from a booking platform into a lifestyle companion—one that fosters belonging, sparks real-life connection, and turns solo travel into a shared emotional journey.
         `
     },
+    
+    {
+        image: "quiz-big-picture.png",
+        size: "seventy",
+        type: "image"
+    },
+
     {
         image: "airbnb-research.jpg",
         size: "seventy",
         type: "image"
     },
+
+    {
+        image: "airbnb-research.jpg",
+        size: "seventy",
+        type: "image"
+    },
+
+       {
+        image: "airbnb-research.jpg",
+        size: "seventy",
+        type: "image"
+    },
+
+
     {
         size: "half",
         type: "text",
