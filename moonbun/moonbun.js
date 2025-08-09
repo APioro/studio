@@ -1,8 +1,8 @@
 // PHOTOES FOR DARKER TALES PROJECT
 const projects = [
     {
-        image: "darker-tales-many-spreads.jpg", // Original image path
-        size: "large",  
+        image: "moonbun-logo-black-square.jpg", // Original image path
+        size: "half",  
 
     },
 

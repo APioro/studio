@@ -350,33 +350,6 @@ section {
 
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.6rem;
-    max-width: 100%;
-    margin: 0 auto;
-    width: 100%; /* Full container width */
-    grid-auto-rows: auto; /* Ensures equal height for items */
-    
-}
-
-@media (max-width: 600px) { /* Media query for phones */
-    .grid-container {
-        max-width: 100%; /* Use full width on phones */
-        padding: 0 10px; /* Optional: add some padding for better spacing */
-    }
-}
-
-
-
-
-
-
-
-
-
-
 
 /* Tile Styles for homepage*/
 
@@ -480,13 +453,32 @@ section {
 }
 
 
-
-
-
-
-
-
 /* Tile Styles for inside projects*/
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr, 1fr; /* it should be: repeat(10, 1fr) - later but it changes on homepage for some reason too! */
+    gap: 2.6rem;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%; /* Full container width */
+    grid-auto-rows: auto; /* Ensures equal height for items */
+    
+}
+
+@media (max-width: 600px) { /* Media query for phones */
+    .grid-container {
+        max-width: 100%; /* Use full width on phones */
+        padding: 0 10px; /* Optional: add some padding for better spacing */
+    }
+}
+
+
+
+
+
+
 .grid-item {
     width: 100%;
     height: auto;
@@ -513,12 +505,22 @@ section {
 
 /* Classes for different sizes of items */
 .grid-item.large {
-    grid-column: span 2; /* Span 2 columns */
+    grid-column: span 10; /* Span 2 columns */
 }
 
 .grid-item.half {
-    grid-column: span 1; /* Span 1 column */
+    grid-column: span 5; /* Span 1 column */
 }
+
+.grid-item.seventy {
+    grid-column: span 6; /* Span 1 column */
+}
+
+
+.grid-item.thirty {
+    grid-column: span 4; /* Span 1 column */
+}
+
 
 .grid-item h2 {
     font-size: 1.5rem;            /* Size for the title */
@@ -556,8 +558,8 @@ section {
 
 .project-description-graphic-design {
     line-height: 2rem;
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 500;
    flex: 1;
     
     
@@ -873,31 +875,3 @@ section {
     padding-right: 30px; /* Add padding to the right */
 }
 
-/*
-.speech {
-    font-size: 1.2em;
-    color: #fff;
-    background: #7e4824;
-    padding: 10px 20px;
-    border-radius: 10px;
-    width: calc(100% - 30px);
-    position: relative;
-    height: auto;
-    margin: 10px 0; 
-}
-
-.speech::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-.speech.left::after {
-    border-width: 15px 15px 15px 0;
-    border-color: transparent #7e4824 transparent transparent;
-    left: -15px;
-    top: calc(50% - 15px); 
-}
- */

@@ -7,14 +7,15 @@ const projects = [
     link: "absolute collagen/absolute-collagen.html",
     theme: "dark" // white text
   },
-  {
-    title: "The Suits Series",
-    category: "Packaging, Branding",
-    image: "packaging/cups-three-pink-closeup.jpg",
+     {
+    title: "Airbnb Circles (D&AD BRIEF) ",
+    category: "UX/UI Design",
+    image: "airbnb/airbnb-intro-mockup.jpg",
     size: "half",
-    link: "packaging/packaging.html",
-    theme: "light" // black text
+    link: "airbnb/airbnb.html",
+    theme: "light"
   },
+
   {
     title: "MoonBun Coffee Shop",
     category: "Branding",
@@ -23,14 +24,23 @@ const projects = [
     link: "moonbun/moonbun.html",
     theme: "light"
   },
+    {
+    title: "The Suits Series",
+    category: "Packaging, Branding",
+    image: "packaging/cups-three-pink-closeup.jpg",
+    size: "half",
+    link: "packaging/packaging.html",
+    theme: "light" // black text
+  },
   {
     title: "Darker Tales ",
     category: "Editorial, Illustration",
-    image: "darker-tales/darker-tales-afterlife-bigger.jpg",
-    size: "large",
+    image: "darker-tales/table-of-content.png",
+    size: "half",
     link: "darker-tales/darker-tales.html",
-    theme: "dark"
-  }
+    theme: "light"
+  },
+
 ];
 
   
