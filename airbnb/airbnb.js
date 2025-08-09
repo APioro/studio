@@ -8,7 +8,9 @@ const projects = [
         size: "thirty",
         type: "text",
         content: `
-            <b>CONCEPT</b>
+        <h2> D&AD Brief for Airbnb</h2>
+        <br><br>
+            <b> CONCEPT</b>
             <br><br>
                 Airbnb Circles is a new system that organizes experiences, hosts, and travelers into emotionally resonant identity “clubs” called Circles.
                 Each Circle—like Dark Enclave, Glam Squad, or Soulful Seeker—represents a distinct aesthetic and lifestyle, helping users find their people and their vibe wherever they go.<br><br>
