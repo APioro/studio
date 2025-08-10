@@ -7,22 +7,25 @@ const projects = [
     },
 
     
+    
     {
         image: "mock-up-moon-bun.png", // Original image path
         size: "half",
     },
 
 
-    {
-        image: "pattern.png", // Original image path
-        size: "half",
-    },
 
   
 
     {
         image: "website.png",
-        size: "large", 
+        size: "half", 
+    },
+
+    
+    {
+        image: "minimalistic-logo.png", // Original image path
+        size: "half",
     },
     // Add more projects as needed...
 ];
