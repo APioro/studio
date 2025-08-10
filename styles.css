@@ -458,7 +458,7 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr, 1fr; /* it should be: repeat(10, 1fr) - later but it changes on homepage for some reason too! */
+    grid-template-columns: 1fr 1fr; /* it should be: repeat(10, 1fr) - later but it changes on homepage for some reason too! */
     gap: 2.6rem;
     max-width: 100%;
     margin: 0 auto;
@@ -505,20 +505,11 @@ section {
 
 /* Classes for different sizes of items */
 .grid-item.large {
-    grid-column: span 10; /* Span 2 columns */
+    grid-column: span 2; /* Span 2 columns */
 }
 
 .grid-item.half {
-    grid-column: span 5; /* Span 1 column */
-}
-
-.grid-item.seventy {
-    grid-column: span 6; /* Span 1 column */
-}
-
-
-.grid-item.thirty {
-    grid-column: span 4; /* Span 1 column */
+    grid-column: span 1; /* Span 1 column */
 }
 
 

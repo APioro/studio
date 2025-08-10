@@ -6,19 +6,22 @@ const projects = [
 
     },
 
+    
     {
-        image: "afterlife.jpg", // Original image path
+        image: "mock-up-moon-bun.png", // Original image path
+        size: "half",
+    },
+
+
+    {
+        image: "pattern.png", // Original image path
         size: "half",
     },
 
   
-    {
-        image: "darker-tales-afterlife-bigger.jpg", // Original image path
-        size: "half",
-    },
 
     {
-        image: "back-side.jpg",
+        image: "website.png",
         size: "large", 
     },
     // Add more projects as needed...
