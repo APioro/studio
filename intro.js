@@ -2,7 +2,7 @@ const text = "I'm a creative generalist who loves to make things ";
 const highlightWords = [
     { text: "functional", style: "highlight-sensible" }, 
     { text: "personal", style: "highlight-creative" }, 
-    { text: "whimmsical", style: "highlight-fun" },
+    { text: "whimsical", style: "highlight-fun" },
     { text: "dark", style: "highlight-boonka" },
     { text: "unique.", style: "highlight-lizzanka" }
 ]; 
