@@ -1,10 +1,10 @@
 const text = "I'm a creative generalist who loves to make things ";
 const highlightWords = [
     { text: "functional", style: "highlight-sensible" }, 
-    { text: "suprising", style: "highlight-creative" }, 
-    { text: "fun", style: "highlight-fun" },
-    { text: "boonka", style: "highlight-boonka" },
-    { text: "lizzanka", style: "highlight-lizzanka" }
+    { text: "personal", style: "highlight-creative" }, 
+    { text: "whimmsical", style: "highlight-fun" },
+    { text: "dark", style: "highlight-boonka" },
+    { text: "unique.", style: "highlight-lizzanka" }
 ]; 
 let currentHighlightWordIndex = 0;
 let index = 0;

@@ -629,23 +629,23 @@ section {
 
 /* For the highlighted last word "sensible" */
 .highlight-sensible {
-    color: #ff8c00;
+    color: #fede0c;
 }
 
 .highlight-creative {
-    color: #6200ff;
+    color: #9ac4f8;
 }
 
 .highlight-fun {
-    color: #0099ff;
+    color: #d44ef9 ;
 }
 
 .highlight-boonka {
-    color: #f700ff;
+    color: #550a26;
 }
 
 .highlight-lizzanka {
-    color: #91ff00;
+    color: #6aba01;
 }
 
 .content-project {
