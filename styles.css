@@ -605,8 +605,8 @@ section {
     font-weight: 700;
     max-width: 1200px; /* Constrain the block width */
     width: 100%; /* Make it responsive */
-    line-height: 1.4; /* Space between lines */
-    text-align: left; /* Text starts from the left */
+    line-height: 1.2; /* Space between lines */
+    text-align: center; /* Text starts from the left */
     white-space: pre-wrap; /* Ensure text wraps to the next line */
 }
 

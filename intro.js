@@ -1,7 +1,9 @@
-const text = "I'm a creative generalist who loves to make things ";
+const text = `I'M ANGELIKA PIÓRO,
+graphic designer 
+`;
 const highlightWords = [
-    { text: "functional", style: "highlight-sensible" }, 
-    { text: "personal", style: "highlight-creative" }, 
+    { text: "psychology lover", style: "highlight-sensible" }, 
+    { text: "still figuring it out", style: "highlight-creative" }, 
     { text: "whimsical", style: "highlight-fun" },
     { text: "dark", style: "highlight-boonka" },
     { text: "unique.", style: "highlight-lizzanka" }
