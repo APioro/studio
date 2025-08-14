@@ -22,9 +22,9 @@ header {
 
 #footer-placeholder {
     display: flex;
-    background-color: #cfd5dc;
+    background-color: #766a06;
     z-index: 1000;
-    padding: 3.125rem;
+    padding: 2rem;
     justify-content: space-between;
     
 }
@@ -40,7 +40,7 @@ header {
     gap: 1rem;            /* optional spacing */
     padding: 0;
     align-items: center;  /* optional, keeps vertical alignment nice */
-     color: black;
+     color: rgb(255, 255, 255);
 }
 
 #footer-logo {
