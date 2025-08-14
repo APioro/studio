@@ -44,6 +44,7 @@ header {
     background-color: #766a06;
     z-index: 1000;
     padding: 2rem;
+    padding-right: 0;
     justify-content: space-between;
     
 }
@@ -55,22 +56,16 @@ header {
 }
 
 #footer-links {
+    font-weight: 300;
     display: flex;        /* make children sit in a row */
     gap: 1rem;            /* optional spacing */
     padding: 0;
-    align-items: center;  /* optional, keeps vertical alignment nice */
+    align-items:end;  /* optional, keeps vertical alignment nice */
      color: rgb(255, 255, 255);
 }
 
-#footer-logo {
-    text-decoration: none;
-    
-    font-size: 2.8rem;   
-    font-weight: 700;  
-    letter-spacing: 0.05rem; 
-    color: rgb(15, 15, 15);
-    text-transform: lowercase; 
-    font-family: 'Urbanist', sans-serif;
+#footer-logo img {
+    height: 200px;
 }
 
 
@@ -106,7 +101,7 @@ a {
 }
 
 .logo img {
-    height: 50px;          /* Set a relative height that fits your navbar */
+    height: 300px;          /* Set a relative height that fits your navbar */
     width: auto;            /* Keep aspect ratio */
     padding-top: 20px;
     margin-left:0px;
