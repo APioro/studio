@@ -20,19 +20,40 @@ header {
     width: 100%;
 }
 
-footer {
+#footer-placeholder {
     display: flex;
     background-color: #cfd5dc;
     z-index: 1000;
     padding: 3.125rem;
+    justify-content: space-between;
     
 }
 
-footer h2 {
+#footer-placeholder h2 {
     margin: 0.8rem;
     font-size: 2.125rem;
     
 }
+
+#footer-links {
+    display: flex;        /* make children sit in a row */
+    gap: 1rem;            /* optional spacing */
+    padding: 0;
+    align-items: center;  /* optional, keeps vertical alignment nice */
+     color: black;
+}
+
+#footer-logo {
+    text-decoration: none;
+    
+    font-size: 2.8rem;   
+    font-weight: 700;  
+    letter-spacing: 0.05rem; 
+    color: rgb(15, 15, 15);
+    text-transform: lowercase; 
+    font-family: 'Urbanist', sans-serif;
+}
+
 
 a {
     cursor: pointer;
