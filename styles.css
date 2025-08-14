@@ -1,3 +1,22 @@
+/* FONTS */
+/* Bold BLUU NEXT */
+@font-face {
+  font-family: 'Bluu Next';
+  src: url('/fonts/BluuNext-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;  /* text stays invisible until font loads */
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'Bluu Next';
+  src: url('/fonts/BluuNext-Bolditalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;  /* text stays invisible until font loads */
+}
+
 /* Google Font: Urbanist */
 body {
     font-family: 'Urbanist', sans-serif;
@@ -84,6 +103,13 @@ a {
     letter-spacing: 0.05rem; 
     color: rgb(15, 15, 15);
     text-transform: lowercase; 
+}
+
+.logo img {
+    height: 50px;          /* Set a relative height that fits your navbar */
+    width: auto;            /* Keep aspect ratio */
+    padding-top: 20px;
+    margin-left:0px;
 }
 
 .nav-list {
