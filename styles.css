@@ -101,10 +101,11 @@ a {
 }
 
 .logo img {
-    height: 300px;          /* Set a relative height that fits your navbar */
+    height: 200px;          /* Set a relative height that fits your navbar */
     width: auto;            /* Keep aspect ratio */
     padding-top: 20px;
     margin-left:0px;
+    
 }
 
 .nav-list {
