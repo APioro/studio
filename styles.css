@@ -46,64 +46,68 @@ header {
     padding: 2rem;
     padding-right: 0;
     justify-content: space-between;
+    align-items: flex-start;
     
 }
 
-#footer-placeholder h2 {
-    margin: 0.8rem;
-    font-size: 2.125rem;
-    
+#footer-links h2 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
-#footer-links {
-    font-weight: 300;
-    display: flex;        /* make children sit in a row */
-    gap: 1rem;            /* optional spacing */
-    padding: 0;
-    align-items:end;  /* optional, keeps vertical alignment nice */
-     color: rgb(255, 255, 255);
+#footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
 }
 
+#footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* footer logo */
 #footer-logo img {
-    height: 200px;
+    max-height: 80px; /* scaled for responsiveness */
+    width: auto;
 }
 
+/* responsive for smaller screens */
 
-a {
-    cursor: pointer;
-    display: block;
-    color: inherit; 
-  }
-
+   @media (max-width: 768px) {
+    #footer-placeholder {
+        padding: 1rem 2rem;
+    }
+    #footer-links h2 {
+        font-size: 1.25rem;   /* shrink links slightly */
+    }
+    #footer-logo img {
+        max-height: 60px;
+    }
+}
 
   a .logo{
     text-decoration: none;
   }
 
 .navbar {
-    min-width: 750px;
+    
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
     padding: 1rem 2rem;
     background-color: #eeeeee;
     height: 20px; /* Set a fixed height */
+    flex-wrap: wrap;
 }
 
 .logo {
-    text-decoration: none;
-    padding-right: 8rem;
-    font-size: 1.3rem;   
-    font-weight: 700;  
-    letter-spacing: 0.05rem; 
-    color: rgb(15, 15, 15);
-    text-transform: lowercase; 
+   
 }
 
 .logo img {
-    height: 200px;          /* Set a relative height that fits your navbar */
+    max-height: 60px;         /* Set a relative height that fits your navbar */
     width: auto;            /* Keep aspect ratio */
-    padding-top: 20px;
+    padding-top: 0px;
     margin-left:0px;
     
 }
@@ -113,6 +117,8 @@ a {
     display: flex;
     gap: 2rem;
     margin: 0;
+    padding: 0;
+    
 }
 
 .nav-list li a {
@@ -132,6 +138,7 @@ a {
 .nav-list li a:hover {
     color: #996211;
 }
+
 
 /*Gallery (labs) index page*/
 
