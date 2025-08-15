@@ -537,7 +537,7 @@ section {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* stack all items in one column */
         padding: 0 10px;             /* optional padding */
@@ -657,7 +657,7 @@ section {
     white-space: pre-wrap; /* Ensure text wraps to the next line */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #typing-text {
         font-size: 5vw; /* Increase font size for small screens */
         padding: 10px; /* Add padding for better spacing */
