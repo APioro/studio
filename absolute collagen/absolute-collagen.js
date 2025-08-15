@@ -30,7 +30,7 @@ function createTiles() {
 
     projects.forEach(project => {
         const gridItem = document.createElement("div");
-        gridItem.classList.add("grid-item", project.size); // Add size class
+        gridItem.classList.add("homepage-grid-item", project.size); // Add size class
 
         // Check file extension to determine whether it's an image or video
         const ext = project.image.split('.').pop().toLowerCase();
