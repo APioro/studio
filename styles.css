@@ -25,6 +25,7 @@ body {
     box-sizing: border-box;
     font-size: 16px;
     background-color: #eeeeee;
+  
 }
 
 body.lightbox-open {
@@ -285,6 +286,7 @@ header {
 
 /*end of gallery*/
 section {
+      box-sizing: border-box;
     padding: 4rem 2.6rem;
     text-align: left;  /* Align text to the left */
 }
@@ -292,8 +294,10 @@ section {
 @media (max-width: 768px) {
     
    section {
+      box-sizing: border-box;
     padding: 4rem 0.6rem;
     text-align: left;  /* Align text to the left */
+  
 }
 }
 
@@ -550,6 +554,7 @@ section {
 
 
 .grid-container {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr; /* it should be: repeat(10, 1fr) - later but it changes on homepage for some reason too! */
     gap: 2.6rem;
@@ -586,11 +591,25 @@ section {
 
 .text-index {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 500;
     padding-left: 3rem;
     padding-bottom: 2.4rem;
 }
-   
+
+
+@media (max-width: 768px) {
+  .project-title-index {
+    padding-left: 1rem;
+  }
+  .text-index {
+    font-size: 1,2rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-bottom: 2.4rem;
+    }
+
+}
+
 .project-info-container {
     display: flex;
     padding-left: 8rem;
