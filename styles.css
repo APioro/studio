@@ -89,7 +89,7 @@ header {
     text-decoration: none;
   }
 
-.navbar {
+#navbar {
     
     display: flex;
     justify-content: space-between;
@@ -98,6 +98,10 @@ header {
     background-color: #eeeeee;
     height: 20px; /* Set a fixed height */
     flex-wrap: wrap;
+
+    position: sticky;  /* makes it stick */
+    top: 0;            /* stick to top */
+    z-index: 1000;     /* stay above content */
 }
 
 .logo {
@@ -523,13 +527,19 @@ section {
     
 }
 
-@media (max-width: 600px) { /* Media query for phones */
+
+@media (max-width: 600px) {
     .grid-container {
-        max-width: 100%; /* Use full width on phones */
-        padding: 0 10px; /* Optional: add some padding for better spacing */
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        padding: 0 10px; /* optional padding */
+    }
+
+    /* Make all large or half items full width */
+    .grid-container .large,
+    .grid-container .half {
+        grid-column: span 1;
     }
 }
-
 
 
 
@@ -927,15 +937,4 @@ section {
     max-width: 900px; /* Locks the image width to 300px */
 }
 
-
-/*
-/* Speech container adjustments */
-.speech-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%; /* Stays within the 300px parent width */
-    gap: 10px; /* Adds spacing between each speech bubble */
-    padding-right: 30px; /* Add padding to the right */
-}
 
