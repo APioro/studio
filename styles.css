@@ -87,7 +87,7 @@ header {
         display: block;       /* make links stack vertically */
         margin: 1rem 0;  /* adjust spacing as needed */
     }
-}
+    }
 
   a .logo{
     text-decoration: none;
@@ -95,21 +95,22 @@ header {
 
 #navbar {
     
-    display: flex;
+     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items: center; /* center vertically based on content */
     padding: 1rem 2rem;
     background-color: #eeeeee;
-    height: 20px; /* Set a fixed height */
-    flex-wrap: wrap;
-
-    position: sticky;  /* makes it stick */
-    top: 0;            /* stick to top */
-    z-index: 1000;     /* stay above content */
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: auto; /* or just remove it */
 }
 
 .logo {
-   
+    display: flex;
+    flex-shrink: 0; 
+    align-items: center; /* ensures the image sits centered in its container */
 }
 
 .logo img {
@@ -119,6 +120,18 @@ header {
     margin-left:0px;
     
 }
+
+ @media (max-width: 768px) {
+    .logo img{
+    max-height: 34px;         /* Set a relative height that fits your navbar */
+    width: auto;            /* Keep aspect ratio */
+    padding-top: 0px;
+    margin-left:0px;
+
+    }
+ }
+
+
 
 .nav-list {
     list-style: none;
