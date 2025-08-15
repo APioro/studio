@@ -41,7 +41,7 @@ header {
 
 #footer-placeholder {
     display: flex;
-    background-color: #766a06;
+    background-color: #705b06;
     z-index: 1000;
     padding: 2rem;
     padding-right: 0;
@@ -78,7 +78,7 @@ header {
         padding: 1rem 2rem;
     }
     #footer-links h2 {
-        font-size: 1.25rem;   /* shrink links slightly */
+        font-size: 1rem;   /* shrink links slightly */
     }
     #footer-logo img {
         max-height: 40px;
@@ -95,10 +95,10 @@ header {
 
 #navbar {
     
-     display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center; /* center vertically based on content */
-    padding: 1rem 2rem;
+    padding: 2rem 2rem 1rem 1rem;
     background-color: #eeeeee;
     
     position: sticky;
@@ -129,6 +129,8 @@ header {
     margin-left:0px;
 
     }
+   
+
  }
 
 
@@ -149,6 +151,11 @@ header {
     font-weight: 800;
     transition: color 0.3s ease;
 }
+ @media (max-width: 768px){
+     .nav-list li a {
+    font-size: 1rem; /* smaller than default 1.3rem */
+    }
+ }
 
 .nav-list li a.active {
     font-weight: bold;           /* Makes the active link bold */
