@@ -46,7 +46,7 @@ header {
     padding: 2rem;
     padding-right: 0;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     
 }
 
@@ -81,7 +81,11 @@ header {
         font-size: 1.25rem;   /* shrink links slightly */
     }
     #footer-logo img {
-        max-height: 60px;
+        max-height: 40px;
+    }
+      #footer-links a {
+        display: block;       /* make links stack vertically */
+        margin: 1rem 0;  /* adjust spacing as needed */
     }
 }
 
