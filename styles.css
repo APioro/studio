@@ -530,47 +530,25 @@ section {
 
 @media (max-width: 600px) {
     .grid-container {
-        grid-template-columns: 1fr; /* 1 column on mobile */
-        padding: 0 10px; /* optional padding */
-    }
-
-    /* Make all large or half items full width */
-    .grid-container .large,
-    .grid-container .half {
-        grid-column: span 1;
-    }
-}
-
-
-
-
-
-
-/* Responsive for small screens */
-@media (max-width: 600px) {
-    .grid-container {
         grid-template-columns: 1fr; /* stack all items in one column */
-        gap: 1rem;
+        padding: 0 10px;             /* optional padding */
+        gap: 1rem;                   /* spacing between items */
     }
 
-    .homepage-grid-item.large {
-        grid-column: span 1; /* full width of single column */
-    }
-
+    .homepage-grid-item.large,
     .homepage-grid-item.half {
-        grid-column: span 1; /* still full width in single column */
+        grid-column: span 1;         /* full width of single column */
     }
 }
-
 
 
 .project-title-index {
+    text-align: left;      /* aligns the text to the left*/
+    padding-right: 3rem;    /* optional spacing from the edge */
+    padding-top: 6rem;
+    padding-bottom: 1.4rem;
     font-size: 3rem;
     font-weight: bold;
-    padding-bottom: 1.4rem;
-    padding-top: 6rem;
-    padding-left: 3rem;
-
 }
 
 .text-index {
@@ -615,6 +593,26 @@ section {
 
 }
 
+@media (max-width: 768px) {  /* adjust breakpoint if needed */
+  .project-info-container {
+    flex-direction: column; /* stack vertically on small screens */
+    gap: 1.5rem;            /* space between items */
+    padding-left: 2rem;     /* reduce padding for mobile */
+    padding-right: 2rem;
+  }
+.project-title-graphic-design {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-bottom: 1.4rem;
+
+}
+  .project-description-graphic-design {
+    width: 100%;            /* make each description full width */
+  }
+}
+
+
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -627,10 +625,6 @@ section {
   transform: translateY(0);
 }
 
-/* Hover Effect 
-.grid-item:hover {
-    transform: scale(1.05); }
-*/
 
 
 
