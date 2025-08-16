@@ -25,8 +25,24 @@ body {
     box-sizing: border-box;
     font-size: 16px;
     background-color: #eeeeee;
+    min-height: 100vh;
   
 }
+
+/* The article fills all the space between header & footer */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+/*--__________*/
+
 
 body.lightbox-open {
   overflow: hidden;
@@ -44,11 +60,18 @@ header {
     display: flex;
     background-color: #705b06;
     z-index: 1000;
-    padding: 2rem;
+    padding:  1rem 2rem;
     padding-right: 0;
     justify-content: space-between;
     align-items: flex-end;
     
+}
+
+#footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;        /* spacing between <a> items */
+    align-items: flex-end; /* vertical alignment */
 }
 
 #footer-links h2 {
@@ -57,13 +80,10 @@ header {
 }
 
 #footer-links a {
+   
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-}
-
-#footer-links a:hover {
-    text-decoration: underline;
 }
 
 /* footer logo */
@@ -72,22 +92,32 @@ header {
     width: auto;
 }
 
+.social-icon{
+ height: auto;
+}
+
 /* responsive for smaller screens */
 
    @media (max-width: 768px) {
     #footer-placeholder {
         padding: 1rem 2rem;
     }
+
+     #footer-links {
+        gap: 1rem;  
+    }
+
     #footer-links h2 {
         font-size: 1rem;   /* shrink links slightly */
     }
     #footer-logo img {
         max-height: 40px;
     }
-      #footer-links a {
-        display: block;       /* make links stack vertically */
-        margin: 1rem 0;  /* adjust spacing as needed */
-    }
+   
+
+    .social-icon{
+    max-width: 32px;
+}
     }
 
   a .logo{
@@ -735,6 +765,29 @@ section {
     align-items: flex-start; /* Align to the top */
 } 
 
+/*GET IN TOUCH STYLE*/
+#get-in-touch-container{
+    display: flex;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+
+#get-in-touch-title{
+    padding: 2rem;
+    font-family: 'Bluu Next';
+    font-size: 18rem;
+    line-height: 13.5rem;
+    letter-spacing:-20px;
+    white-space: normal; /* allows wrapping */
+}
+
+#get-in-touch-details{
+    padding: 2rem;
+    font-family: 'Urbanist';
+    font-size: 1.2rem;
+    padding: 2rem;
+   
+}
 
 /* Sidebar */
 .sidebar-project {
