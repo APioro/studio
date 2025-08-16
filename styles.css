@@ -26,6 +26,7 @@ body {
     font-size: 16px;
     background-color: #eeeeee;
     min-height: 100vh;
+     transition: background-color 0.2s ease;
   
 }
 
@@ -36,7 +37,9 @@ body {
   flex-direction: column;
 }
 
+
 main {
+overflow-x: hidden;
   flex: 1;
 }
 
@@ -48,6 +51,11 @@ body.lightbox-open {
   overflow: hidden;
 }
 
+body.page-contact{
+    background-color: #171717;
+}
+
+
 header {
     position: sticky;
     top: 0;
@@ -58,7 +66,7 @@ header {
 
 #footer-placeholder {
     display: flex;
-    background-color: #705b06;
+    background-color: #141413;
     z-index: 1000;
     padding:  1rem 2rem;
     padding-right: 0;
@@ -93,7 +101,7 @@ header {
 }
 
 .social-icon{
- height: auto;
+  max-width: 32px;
 }
 
 /* responsive for smaller screens */
@@ -189,19 +197,34 @@ header {
  }
 
 .nav-list li a.active {
-    font-weight: bold;           /* Makes the active link bold */
-    pointer-events: none;       /* Prevents hover effects */
-    color: #996211;             /* Change color if desired */
+    font-weight: bold;           
+    pointer-events: none;      
+    color: #996211;             
 }
 
 .nav-list li a:hover {
     color: #996211;
 }
 
+/*NAV CUSTOM COLORS FOR THE BODY PAGE CONTACT */
+
+body.page-contact #navbar {
+    background-color: rgb(6, 6, 6); 
+}
+
+body.page-contact #navbar .nav-list li a {
+    color: #dfdbd3; 
+}
+
+body.page-contact #navbar .nav-list li a:hover {
+    color: #aeabab; 
+}
+
+
 .button-wrapper {
     display: flex;
-    justify-content: center; /* centers children horizontally */
-    /* optional: add vertical spacing if needed */
+    justify-content: center; 
+
     margin: 2rem;
     margin-bottom: 4rem;
 }
@@ -801,29 +824,7 @@ section {
     align-items: flex-start; /* Align to the top */
 } 
 
-/*GET IN TOUCH STYLE*/
-#get-in-touch-container{
-    display: flex;
-    box-sizing: border-box;
-    align-items: flex-end;
-}
 
-#get-in-touch-title{
-    padding: 2rem;
-    font-family: 'Bluu Next';
-    font-size: 18rem;
-    line-height: 13.5rem;
-    letter-spacing:-20px;
-    white-space: normal; /* allows wrapping */
-}
-
-#get-in-touch-details{
-    padding: 2rem;
-    font-family: 'Urbanist';
-    font-size: 1.2rem;
-    padding: 2rem;
-   
-}
 
 /* Sidebar */
 .sidebar-project {

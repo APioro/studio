@@ -1,0 +1,26 @@
+
+
+/*GET IN TOUCH STYLE*/
+#get-in-touch-container{
+    display: flex;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+
+#get-in-touch-title{
+    color: #aeabab;
+    padding: 2rem;
+    font-family: 'Bluu Next';
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing:auto;
+    white-space: normal; /* allows wrapping */
+}
+
+#get-in-touch-details{
+    padding: 2rem;
+    font-family: 'Urbanist';
+    font-size: 1.2rem;
+    padding: 2rem;
+   
+}
