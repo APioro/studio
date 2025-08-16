@@ -198,6 +198,41 @@ header {
     color: #996211;
 }
 
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* centers children horizontally */
+    /* optional: add vertical spacing if needed */
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.button {
+
+    font-family: Urbanist;
+    font-size: 20px;
+    color: #000;
+    background: transparent;   /* initial background */
+    text-decoration: none;     /* remove underline */
+    
+    width: fit-content;
+    display: flex;
+    padding: 15px 19px;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1.4px solid #323232;
+}
+
+.button:hover,
+.button:focus{
+    background: #705B06;
+    color: #dfdbd3;
+    border: 1.4px solid #dfdbd3;
+
+    cursor: pointer;
+}
+
 
 /*Gallery (labs) index page*/
 
@@ -646,7 +681,7 @@ section {
     padding-left: 8rem;
     padding-right: 8rem;
     padding-top: 3rem;
-    padding-bottom: 8.125rem;
+    padding-bottom: 6rem;
     gap:6rem;
     
 }
@@ -682,6 +717,7 @@ section {
     gap: 1.5rem;            /* space between items */
     padding-left: 2rem;     /* reduce padding for mobile */
     padding-right: 2rem;
+    padding-bottom: 3rem;
   }
 .project-title-graphic-design {
     font-size: 2.2rem;
