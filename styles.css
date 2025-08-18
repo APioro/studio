@@ -52,7 +52,7 @@ body.lightbox-open {
 }
 
 body.page-contact{
-    background-color: #171717;
+    background-color: #0e0e0e;
 }
 
 
@@ -66,7 +66,7 @@ header {
 
 #footer-placeholder {
     display: flex;
-    background-color: #141413;
+    background-color: #0e0e0e;;
     z-index: 1000;
     padding:  1rem 2rem;
     padding-right: 0;
@@ -209,7 +209,7 @@ header {
 /*NAV CUSTOM COLORS FOR THE BODY PAGE CONTACT */
 
 body.page-contact #navbar {
-    background-color: rgb(6, 6, 6); 
+    background-color: #0e0e0e;; 
 }
 
 body.page-contact #navbar .nav-list li a {

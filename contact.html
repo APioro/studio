@@ -20,10 +20,10 @@
     <main>
     <div id="grid-container-about-me">
     
-
+         <div id="vertical-line"></div>
     
         <div id="get-in-touch-title"> 
-            I’m Angelika Pióro, <br> a Multidisciplinary Creative
+            I’m <span class="highlight-name">Angelika Pióro</span>, <br> a Multidisciplinary Creative
         </div>
          <div id="get-in-touch-subheader"> 
             I studied at Coventry University and have spent the past year building a portfolio exploring UI/UX, branding, and editorial design. 
@@ -53,6 +53,13 @@
     // Add the class after page loads to trigger the transition
     window.addEventListener('load', () => {
       document.body.classList.add('page-contact');
+    });
+  </script>
+
+  
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('vertical-line').classList.add('animate');
     });
   </script>
 
