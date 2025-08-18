@@ -55,6 +55,10 @@ body.page-contact{
     background-color: #0e0e0e;
 }
 
+body.page-contact .nav-list{
+    background-color: #0e0e0e;
+}
+
 
 header {
     position: sticky;
@@ -146,19 +150,26 @@ header {
     height: auto; /* or just remove it */
 }
 
-.logo {
+#navbar.logo {
     display: flex;
     flex-shrink: 0; 
     align-items: center; /* ensures the image sits centered in its container */
 }
 
-.logo img {
+#navbar .logo img {
+    content: url('/logo/initials-logo-black.png');
     max-height: 60px;         /* Set a relative height that fits your navbar */
     width: auto;            /* Keep aspect ratio */
     padding-top: 0px;
     margin-left:0px;
     
 }
+
+body.page-contact #navbar .logo img {
+  content: url('/logo/initials-logo-white.png');
+}
+
+
 
  @media (max-width: 768px) {
     .logo img{
@@ -213,12 +224,14 @@ body.page-contact #navbar {
 }
 
 body.page-contact #navbar .nav-list li a {
-    color: #dfdbd3; 
+    color: #ececea; 
 }
 
-body.page-contact #navbar .nav-list li a:hover {
-    color: #aeabab; 
+body.page-contact #navbar .nav-list li a :hover{
+    color: #000;
 }
+
+
 
 
 .button-wrapper {
