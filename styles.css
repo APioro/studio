@@ -540,6 +540,50 @@ section {
     background-color: #fff;    /* White background for case studies */
 }
 
+/* Tile Styles for project pages - no zoom in*/
+
+.grid-item {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px; /* Rounded corners */
+    
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;     /* this keeps the aspect ratio */
+    max-height: 100vh; 
+    display: block;
+    border-radius: 0px; /* Match the border-radius of the tile */
+    object-fit: cover;
+    object-position: 50% 50%;
+    
+}
+
+/* Classes for different sizes of items */
+.grid-item.large {
+    grid-column: span 2; /* Span 2 columns */
+}
+
+.grid-item.half {
+    grid-column: span 1; /* Span 1 column */
+}
+
+
+.grid-item h2 {
+    font-size: 1.5rem;            /* Size for the title */
+    margin: 10;                    /* Remove default margins */
+    color: #000;                  /* Title color */
+}
+
+
+@media (max-width: 768px) {
+    .grid-item.large,
+    .grid-item.half {
+        grid-column: span 1;         /* full width of single column */
+    }
+}
 
 
 

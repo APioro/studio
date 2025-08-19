@@ -91,7 +91,7 @@ function createTiles() {
 
     projects.forEach(project => {
         const gridItem = document.createElement("div");
-        gridItem.classList.add("homepage-grid-item", project.size);
+        gridItem.classList.add("grid-item", project.size);
 
         if (project.type === "image") {
             const img = document.createElement("img");
