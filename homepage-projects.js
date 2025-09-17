@@ -17,6 +17,27 @@ const projects = [
     theme: "light"
   },
 
+      {
+    title: "MoonBun Coffee Shop",
+    category: "Branding",
+    image: "moonbun/moonbun-logo-black-square.jpg",
+    size: "half",
+    link: "moonbun/moonbun.html",
+    theme: "light"
+  },
+
+
+      
+  {
+    title: "Artsider Foundation ",
+    category: "Branding, Charity, NGO",
+    image: "artsider/artsider_cards.jpg",
+    size: "half",
+    link: "artsider/artsider.html",
+    theme: "light"
+  },
+
+  
     {
     title: "The Suits Series",
     category: "Packaging, Branding",
@@ -25,24 +46,7 @@ const projects = [
     link: "packaging/packaging.html",
     theme: "light" // black text
   },
-      
-  {
-    title: "Airbnb Circles (D&AD BRIEF) ",
-    category: "UX/UI Design",
-    image: "airbnb/airbnb-intro-mockup.jpg",
-    size: "half",
-    link: "airbnb/airbnb.html",
-    theme: "light"
-  },
 
-    {
-    title: "MoonBun Coffee Shop",
-    category: "Branding",
-    image: "moonbun/moonbun-logo-black-square.jpg",
-    size: "half",
-    link: "moonbun/moonbun.html",
-    theme: "light"
-  },
 
 ];
 
