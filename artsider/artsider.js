@@ -31,6 +31,11 @@ const projects = [
 
     },
 
+    {
+        image: "pattern.jpg",
+        size: "large", 
+    },
+
 
     {
         image: "artsider_socialmedia.jpg",
