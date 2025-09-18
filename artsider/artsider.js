@@ -1,7 +1,7 @@
 // PHOTOES FOR DARKER TALES PROJECT
 const projects = [
     {
-        image: "artsider-logo.png", // Original image path
+        image: "artsider_sign.jpg", // Original image path
         size: "half",  
 
     },
@@ -13,20 +13,25 @@ const projects = [
         size: "half",
     },
 
+    {
+        image: "artsider_website.jpg",
+        size: "large", 
+    },
 
+     {
+        image: "artsider_stand.jpg", // Original image path
+        size: "half",
+    },
 
   
 
     {
-        image: "website.png",
-        size: "half", 
+        image: "artsider_socialmedia.jpg",
+        size: "large", 
     },
 
     
-    {
-        image: "minimalistic-logo.png", // Original image path
-        size: "half",
-    },
+  
     // Add more projects as needed...
 ];
 
