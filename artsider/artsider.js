@@ -1,17 +1,20 @@
 // PHOTOES FOR DARKER TALES PROJECT
 const projects = [
-    {
-        image: "artsider_sign.jpg", // Original image path
-        size: "half",  
+ 
 
+    
+         {
+        image: "artsider_phone.jpg", // Original image path
+        size: "half",
     },
 
-    
-    
-    {
+      
+  {
         image: "artsider_cards.jpg", // Original image path
         size: "half",
     },
+  
+  
 
     {
         image: "artsider_website.jpg",
@@ -19,11 +22,15 @@ const projects = [
     },
 
      {
-        image: "artsider_stand.jpg", // Original image path
+        image: "artsider_stand_green.jpg", // Original image path
         size: "half",
     },
+   {
+        image: "artsider_sign.jpg", // Original image path
+        size: "half",  
 
-  
+    },
+
 
     {
         image: "artsider_socialmedia.jpg",
