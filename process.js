@@ -13,7 +13,7 @@ const steps = [
 ];
 
 function createTiles() {
-  const gridContainer = document.getElementById("grid-container");
+  const gridContainer = document.getElementById("grid-container-process");
   if (!gridContainer) return;
 
   const frag = document.createDocumentFragment();

@@ -19,7 +19,7 @@
 
 /* Google Font: Urbanist */
 body {
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -95,7 +95,7 @@ header {
    
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 /* footer logo */
@@ -195,10 +195,10 @@ body.page-contact #navbar .logo img {
 }
 
 .nav-list li a {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-decoration: none;
     color: rgb(15, 15, 15);
-    font-weight: 800;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
  @media (max-width: 768px){
@@ -387,7 +387,7 @@ body.page-contact #navbar .nav-list li a :hover{
 
 /*end of gallery*/
 section {
-      box-sizing: border-box;
+    box-sizing: border-box;
     padding: 4rem 2.6rem;
     text-align: left;  /* Align text to the left */
 }
