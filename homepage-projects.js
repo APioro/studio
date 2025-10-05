@@ -1,12 +1,4 @@
 const projects = [
-  {
-    title: "Absolute Collagen",
-    category: "UX/UI Design, E-commerce",
-    image: "/absolute collagen/ac-mockup-far.jpg",
-    size: "large",
-    link: "absolute collagen/absolute-collagen.html",
-    theme: "dark" // white text
-  },
 
   {
     title: "Darker Tales ",
@@ -18,15 +10,22 @@ const projects = [
   },
 
       {
-    title: "MoonBun Coffee Shop",
-    category: "Branding",
-    image: "moonbun/moonbun-logo-black-square.jpg",
+    title: "Bowl'd Salad Bar",
+    category: "Branding, UI/UX",
+    image: "bowld/aspa-mockup.jpg",
     size: "half",
-    link: "moonbun/moonbun.html",
-    theme: "light"
+    link: "bowld/bowld.html",
+    theme: "dark" // black text
   },
 
-
+    {
+    title: "Absolute Collagen",
+    category: "UX/UI Design, E-commerce",
+    image: "/absolute collagen/ac-mockup-far.jpg",
+    size: "large",
+    link: "absolute collagen/absolute-collagen.html",
+    theme: "dark" // white text
+  },
       
   {
     title: "Artsider Foundation ",
@@ -38,15 +37,17 @@ const projects = [
   },
 
   
-    {
-    title: "The Suits Series",
-    category: "Packaging, Branding",
-    image: "packaging/cups-three-pink-closeup.jpg",
+      {
+    title: "MoonBun Coffee Shop",
+    category: "Branding",
+    image: "moonbun/moonbun-logo-black-square.jpg",
     size: "half",
-    link: "packaging/packaging.html",
-    theme: "light" // black text
+    link: "moonbun/moonbun.html",
+    theme: "light"
   },
 
+
+  
 
 ];
 
