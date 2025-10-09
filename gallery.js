@@ -1,10 +1,10 @@
 const mediaItems = [
-  { type: "image", title: "Catalogue", file: "labs/degree-show-catalogue.jpg" },
-  { type: "video", title: "Blender animation", file: "labs/blender-animation.mp4" },
-  { type: "image", title: "Power of the myth book cover", file: "labs/book-far.jpg" },
-  { type: "image", title: "Power of the myth", file: "labs/book-closeup.jpg" },
-  { type: "image", title: "Degree Show", file: "labs/overlap.jpg" }, // example video
-  { type: "image", title: "Shrine", file: "labs/shrine.jpg" }
+  { type: "image", file: "labs/degree-show-catalogue.jpg" },
+  { type: "video", file: "labs/blender-animation.mp4" },
+  { type: "image", file: "labs/book-far.jpg" },
+  { type: "image", file: "labs/book-closeup.jpg" },
+  { type: "image", file: "labs/overlap.jpg" }, // example video
+  { type: "image", file: "labs/shrine.jpg" }
 ];
 
 const galleryInner = document.getElementById('galleryInner');
@@ -15,8 +15,8 @@ mediaItems.forEach(item => {
 
   if (item.type === "image") {
     div.innerHTML = `
-      <img src="${item.file}" alt="${item.title}">
-      <div class="title">${item.title}</div>
+      <img src="${item.file}">
+     
     `;
   } else if (item.type === "video") {
     div.innerHTML = `
@@ -29,7 +29,7 @@ mediaItems.forEach(item => {
         preload="metadata"
         style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;">
       </video>
-      <div class="title">${item.title}</div>
+     
     `;
   }
 

@@ -16,7 +16,9 @@
   font-style: italic;
   font-display: block;  /* text stays invisible until font loads */
 }
-
+:root {
+  overscroll-behavior: none;
+}
 /* Google Font: Urbanist */
 body {
     font-family: 'Noto Sans', sans-serif;
@@ -27,6 +29,9 @@ body {
     background-color: #eeeeee;
     min-height: 100vh;
      transition: background-color 0.2s ease;
+
+      overscroll-behavior: none;
+      overflow-x: hidden;
   
 }
 
@@ -337,9 +342,31 @@ body.page-contact #navbar .nav-list li a :hover{
   transform: scale(1.03);
 }
 
-.title {
-  display: none;
+
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    padding-left: 8rem;
 }
+
+
+.title {
+    font-size: 5rem;
+    font-weight: bold;
+    padding-bottom: 0rem;
+    padding-top:3rem;
+}
+
+.subheader {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 0rem;
+    padding-top: 0.6rem;
+}
+
+
+
 
 /*for js lightbox(large image ) effect */
 
@@ -1107,6 +1134,7 @@ section {
 form{
   display:flex;
   flex-direction:column;
+  padding-left: 8rem;
   gap:20px;
   max-width:720px; /* optional */
 }
