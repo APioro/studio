@@ -23,6 +23,10 @@
        <!-- dont delete this - its public access key (not ap key) -->
     <input type="hidden" name="access_key" value="f2f493b5-ddc5-4de3-9906-4dc88bae6833">
 
+     <!-- Strongly recommended: metadata to lower spam score -->
+  <input type="hidden" name="subject" value="New booking inquiry from website">
+  <input type="hidden" name="from_name" value="Studio Booking Form">
+  <input type="hidden" name="replyto" value="email"> 
        <!-- edit form here -->
     <label> Name
       <input type="text" name="name" required>
@@ -51,16 +55,16 @@
       <legend>Services needed*</legend>
       <div class="services-list">
         <label class="checkbox-label">
-          <input type="checkbox" name="services[]" value="Brand Strategy"> Brand Strategy
+          <input type="checkbox" name="services" value="Brand Strategy"> Brand Strategy
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="services[]" value="Logo Design"> Logo Design
+          <input type="checkbox" name="services" value="Logo Design"> Logo Design
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="services[]" value="Website Design"> Website Design
+          <input type="checkbox" name="services" value="Website Design"> Website Design
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="services[]" value="Packaging Design"> Packaging Design
+          <input type="checkbox" name="services" value="Packaging Design"> Packaging Design
         </label>
       </div>
     </fieldset>
@@ -80,7 +84,7 @@
     </label>
 
     <!-- Honeypot -->
-    <input type="hidden" name="_gotcha" style="display:none !important">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none !important">
 
     <button type="submit">Send</button>
   </form>
