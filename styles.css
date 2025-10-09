@@ -387,6 +387,7 @@ body.page-contact #navbar .nav-list li a :hover{
 
 /*end of gallery*/
 section {
+    flex: 1;
     box-sizing: border-box;
     padding: 4rem 2.6rem;
     text-align: left;  /* Align text to the left */
@@ -1103,4 +1104,89 @@ section {
     max-width: 900px; /* Locks the image width to 300px */
 }
 
+form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  max-width:720px; /* optional */
+}
 
+/* Labels stack input below text */
+label{
+  display:block;
+  font-family:'Noto Sans', sans-serif;
+}
+
+/* Only style text-like inputs */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  background-color:#e8e8e8;
+  padding:12px 16px;
+  outline:none;
+  width:100%;
+  color:#3f3f3f;
+  border-radius:8px;
+  border:1px solid #d1d1d1;
+  transition:border-color 0.1s ease;
+  font-family:inherit;
+  font-size:16px;
+  box-sizing:border-box;
+  margin-top:0.6rem;
+}
+
+/* Placeholder color */
+input::placeholder,
+textarea::placeholder { color:#ccc; }
+
+/* Checkbox reset + nicer look */
+input[type="checkbox"]{
+  width:auto;
+  margin:0;              /* remove top margin from global rule */
+  accent-color:#596A95;  /* modern browsers */
+}
+
+/* Services group */
+.services-group{
+  border:none;
+  padding:0;
+  margin:0;
+}
+
+.services-group legend{
+  font-weight:600;
+  margin-bottom:0.5rem;
+  font-family:'Noto Sans', sans-serif;
+}
+
+/* Grid list for checkboxes */
+.services-list{
+  display:grid;
+  gap:0.6rem 1rem;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.checkbox-label{
+  font-family:'Noto Sans', sans-serif;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  line-height:1.2;
+}
+
+/* Button (optional) */
+button[type="submit"]{
+  padding:12px 16px;
+  border-radius:8px;
+  border:1px solid #2B3040;
+  background:#222630;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+button[type="submit"]:hover{ opacity:0.95; }
