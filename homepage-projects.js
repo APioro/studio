@@ -1,13 +1,14 @@
 const projects = [
-
   {
-    title: "Darker Tales ",
-    category: "Editorial, Illustration",
-    image: "darker-tales/table-of-content.png",
+    title: "Artsider Foundation ",
+    category: "Branding, Charity, NGO",
+    image: "artsider/artsider_cards.jpg",
     size: "half",
-    link: "darker-tales/darker-tales.html",
+    link: "artsider/artsider.html",
     theme: "light"
   },
+
+
 
       {
     title: "Bowl'd Salad Bar",
@@ -27,15 +28,15 @@ const projects = [
     theme: "dark" // white text
   },
       
-  {
-    title: "Artsider Foundation ",
-    category: "Branding, Charity, NGO",
-    image: "artsider/artsider_cards.jpg",
+
+    {
+    title: "Darker Tales ",
+    category: "Editorial, Illustration",
+    image: "darker-tales/table-of-content.png",
     size: "half",
-    link: "artsider/artsider.html",
+    link: "darker-tales/darker-tales.html",
     theme: "light"
   },
-
   
       {
     title: "MoonBun Coffee Shop",
