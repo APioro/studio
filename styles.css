@@ -348,6 +348,7 @@ body.page-contact #navbar .nav-list li a :hover{
     flex-direction: column;
     margin-bottom: 6rem;
     padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 

@@ -21,18 +21,22 @@ const projects = [
         size: "large", 
     },
 
+
      {
-        image: "artsider_stand_green.jpg", // Original image path
+        image: "color.jpg", // Original image path
         size: "half",
     },
+
+
+
    {
-        image: "artsider_sign.jpg", // Original image path
+        image: "artsider.gif", // Original image path
         size: "half",  
 
     },
 
     {
-        image: "pattern.jpg",
+        image: "logo_project.jpg",
         size: "large", 
     },
 
@@ -42,6 +46,10 @@ const projects = [
         size: "large", 
     },
 
+        {
+        image: "logo_rational.jpg",
+        size: "large", 
+    },
     
   
     // Add more projects as needed...
@@ -60,6 +68,10 @@ function createTiles() {
         img.src = project.image; // Original image
         img.loading = "lazy"; // Add lazy loading
          
+         // Optional: add .gif-specific class if needed
+        if (project.image.endsWith(".gif")) {
+            img.classList.add("is-gif");
+        }
 
         // Append image, title, and tags to the grid item
      
