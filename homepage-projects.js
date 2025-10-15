@@ -13,7 +13,7 @@ const projects = [
       {
     title: "Bowl'd Salad Bar",
     category: "Branding, UI/UX",
-    image: "bowld/aspa-mockup.jpg",
+    image: "bowld/asparagus.jpg",
     size: "half",
     link: "bowld/bowld.html",
     theme: "dark" // black text
