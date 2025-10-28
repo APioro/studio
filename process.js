@@ -3,12 +3,12 @@ const steps = [
     text: "Stage 1 is Discovery, after I've received an enquiry from you through my booking form, I will contact you to book in a Discovery Call if the project deems fit. This is the first step on setting the stage for our creative journey! This is where we hop on a call and meet to explore, understand, and align visions for the project. My primary focus is understanding your objectives, target audience, and the purpose behind your design project. I'll ask thoughtful questions to uncover specific details about your vision, desired outcomes, and what your looking to get out of this project. Just a friendly chit chat at the end of the day! After this call, I will send over a project proposal outlining all the deliverables and scope of work agreed upon during the call. When the Proposal is agreed upon, I will send you a Deposit Invoice and Contract, once settled, we're ready to go!", 
     size: "half" },
 
-  { image: "/absolute collagen/ac-mockup-far.jpg", size: "half" },
-  { image: "/absolute collagen/ac-mockup-far.jpg", size: "half" },
+  { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
+  { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
   { title: "Absolute Collagen", text: "Branding & UX", size: "half" },
     { title: "Absolute Collagen", text: "Branding & UX", size: "half" },
-     { image: "/absolute collagen/ac-mockup-far.jpg", size: "half" },
-  { image: "/absolute collagen/ac-mockup-far.jpg", size: "half" },
+     { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
+  { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
   { title: "Absolute Collagen", text: "Case Study", size: "half" },
 ];
 
