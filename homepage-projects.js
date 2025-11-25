@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Artsider Foundation ",
-    category: "Branding, Charity, NGO",
+    category: "Branding, Social Media, NGO",
     image: "artsider/artsider_cards.jpg",
     size: "half",
     link: "artsider/artsider.html",
@@ -12,7 +12,7 @@ const projects = [
 
       {
     title: "Bowl'd Salad Bar",
-    category: "Branding, UI/UX",
+    category: "Branding, Packaging",
     image: "bowld/asparagus.jpg",
     size: "half",
     link: "bowld/bowld.html",
@@ -67,7 +67,8 @@ function createTiles() {
     const img = document.createElement("img");
     img.src = project.image;
     img.alt = project.title;
-    img.loading = "lazy";
+
+    if(index !== 0) img.loading = "lazy";
 
     const link = document.createElement("a");
     link.href = project.link;
