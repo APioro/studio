@@ -144,6 +144,7 @@ header {
 #navbar {
     
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center; /* center vertically based on content */
     padding: 1rem 2rem 1rem 1rem;
