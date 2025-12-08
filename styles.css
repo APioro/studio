@@ -1,4 +1,53 @@
-/* FONTS */
+/* TYPOGRAPHY SYSTEM */
+p{
+    font-family: "Noto Sana", sans-serif;
+    padding: 0;
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(28, 31, 3);
+    line-height: 1.8rem;
+}
+
+.short{
+    padding-right: 8rem;
+}
+
+h4{
+    font-family: monospace;
+    padding: 0;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgb(53, 53, 52);
+    line-height: 1rem;
+}
+
+h3{
+    font-family: "Montserrat", sans;
+    padding: 0;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: rgb(0, 0, 0);
+    line-height: 3rem;
+}
+
+h2{
+     font-family: "Montserrat", sans;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 0;
+    inline-size: none;
+    font-size: 2.4rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 3rem;
+   font-size: 3.4rem;
+    line-height: 3.8rem;
+}
+
+
+
 /* Bold BLUU NEXT */
 @font-face {
   font-family: 'Bluu Next';
@@ -704,11 +753,7 @@ section {
 }
 
 
-.grid-item h2 {
-    font-size: 1.5rem;            /* Size for the title */
-    margin: 10;                    /* Remove default margins */
-    color: #000;                  /* Title color */
-}
+
 
 
 @media (max-width: 768px) {
@@ -829,6 +874,10 @@ section {
 }
 
 /* Tile Styles for inside projects*/
+#main-container{
+    display: flex;
+    flex-direction: column;
+}
 
 
 .grid-container {
@@ -842,6 +891,11 @@ section {
     grid-auto-rows: auto; /* Ensures equal height for items */
     
 }
+
+.homepage-text{
+    padding: 4rem 2.6rem;
+}
+
 
 
 @media (max-width: 768px) {
