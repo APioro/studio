@@ -14,25 +14,40 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "AzeretMono";
+  src: url("/fonts/AzeretMono-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900; /* or whatever range the font supports */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AzeretMono";
+  src: url("/fonts/AzeretMono-VariableItalic.woff2") format("woff2-variations");
+  font-weight: 100 900; /* or whatever range the font supports */
+  font-style: italic;
+}
+
 :root {
     overscroll-behavior: none;
 
   --font-primary: 'Switzer', sans-serif;
+  --font-secondary: 'AzeretMono', monospace;
 
   /* font sizes */
   --fs-h1: 180px;
-  --fs-h2: 54px;
-  --fs-h3: 44px;
+  --fs-h2: 60px;
+  --fs-h3: 34px;
   --fs-h4: 22px;
   --fs-running-h:18px;
-  --fs-p: 20px; /* base paragraph size */
+  --fs-p: 18px; /* base paragraph size */
   --fs-small: 14px; /* smaller text if needed */
-  --fs-tiny: 12px; /* smaller text if needed */
+  --fs-tiny: 14px; /* smaller text if needed */
 
   /* line heights */
   --lh-h1: 1.1;
   --lh-h2: 1.2;
-  --lh-h3: 1.3;
+  --lh-h3: 1.2;
   --lh-h4: 1.4;
   --lh-p: 1.4;
   --lh-small: 1.4;
@@ -55,7 +70,7 @@
 h1, h2, h3, h4 {
   font-family: var(--font-primary);
   margin: 0;
-  margin-bottom: 1em; /* scales with font size */
+  margin-bottom: 0.8em; /* scales with font size */
 }
 
 p{
@@ -81,8 +96,8 @@ small {
   line-height: var(--lh-small);
 }
 
-.running-h{font-size: var(--fs-running-h); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
-.tiny{font-size: var(--fs-tiny); line-height: var(--lh-tiny); font-weight: var(--fw-medium); }
+.running-h{font-family: var(--font-secondary); font-size: var(--fs-running-h); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
+.tiny{font-family: var(--font-secondary); font-size: var(--fs-tiny); line-height: var(--lh-tiny); font-weight: var(--fw-medium);}
 
 .dark-section {
   background-color: #000;
