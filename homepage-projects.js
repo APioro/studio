@@ -1,4 +1,33 @@
 const projects = [
+  
+    {
+    title: "Astrolume",
+    category: "Branding",
+    image: "astrolume/astrolume.jpg",
+    size: "half",
+    link: "astrolume/astrolume.html",
+    theme: "light"
+  },
+ {
+    title: "Darker Tales ",
+    category: "Editorial, Illustration",
+    image: "darker-tales/table-of-content.png",
+    size: "half",
+    link: "darker-tales/darker-tales.html",
+    theme: "light"
+  },
+  
+
+  {
+    title: "Absolute Collagen",
+    category: "UX/UI Design, E-commerce",
+    image: "absolute collagen/ac-mockup-far.jpg",
+    size: "large",
+    link: "absolute collagen/absolute-collagen.html",
+    theme: "dark" // white text
+  },
+
+  
   {
     title: "Artsider Foundation ",
     category: "Branding, Social Media, NGO",
@@ -19,33 +48,6 @@ const projects = [
     theme: "dark" // black text
   },
 
-    {
-    title: "Absolute Collagen",
-    category: "UX/UI Design, E-commerce",
-    image: "absolute collagen/ac-mockup-far.jpg",
-    size: "large",
-    link: "absolute collagen/absolute-collagen.html",
-    theme: "dark" // white text
-  },
-      
-
-    {
-    title: "Darker Tales ",
-    category: "Editorial, Illustration",
-    image: "darker-tales/table-of-content.png",
-    size: "half",
-    link: "darker-tales/darker-tales.html",
-    theme: "light"
-  },
-  
-      {
-    title: "Astrolume",
-    category: "Branding",
-    image: "astrolume/astrolume.jpg",
-    size: "half",
-    link: "moonbun/moonbun.html",
-    theme: "light"
-  },
 
 
   
