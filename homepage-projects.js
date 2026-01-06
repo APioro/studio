@@ -39,9 +39,9 @@ const projects = [
   },
   
       {
-    title: "MoonBun Coffee Shop",
+    title: "Astrolume",
     category: "Branding",
-    image: "moonbun/moonbun-logo-black-square.jpg",
+    image: "astrolume/astrolume.jpg",
     size: "half",
     link: "moonbun/moonbun.html",
     theme: "light"
