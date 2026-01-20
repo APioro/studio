@@ -304,7 +304,7 @@ header {
 
 .nav-list li a {
     font-family: var(--font-primary), sans-serif;
-    font-size: var(--lh-h3);
+    font-size: var(--fs-p);
     font-weight: var(--fw-medium);
     text-decoration: none;
     color: #fcfcf9;
