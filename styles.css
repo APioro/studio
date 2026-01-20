@@ -211,8 +211,9 @@ header {
 
 /* footer logo */
 #footer-logo img {
-    max-height: 80px; /* scaled for responsiveness */
+    max-height: 64px; /* scaled for responsiveness */
     width: auto;
+    padding-right: clamp(10px, 0.83vw, 32px);
 }
 
 .social-icon{
@@ -270,9 +271,9 @@ header {
 
 #navbar .logo img {
     
-    max-height: 63px;
+    max-height: 42px;
     width: auto;
-    margin-left: 8px;
+    margin-left: clamp(10px, 0.83vw, 32px);
     
 }
 
