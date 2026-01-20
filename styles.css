@@ -35,7 +35,7 @@
   --font-secondary: 'AzeretMono', monospace;
 
   /* font sizes*/
-  --fs-h1: clamp(96px, 5.2vw, 260px);   /* main page titles, scales for HD → 4K */
+  --fs-h1: clamp(72px, 5.3vw, 260px);   /* main page titles, scales for HD → 4K */
   --fs-h2: clamp(48px, 3.2vw, 130px); /* major sections */
   --fs-h3: clamp(36px, 2vw, 74px);  /* subsection headings */
   --fs-h4: clamp(24px, 1.6vw, 48px);  /* minor headings */
@@ -78,7 +78,7 @@ p{
     margin-bottom: 0.8em; /* scales with font size */
 }
 
-h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: var(--fw-bold);  letter-spacing: calc(-0.04em - 0.001vw)}
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: var(--fw-bold);  letter-spacing: calc(-0.03em - 0.001vw)}
 h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw)} 
 h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: var(--fw-medium); letter-spacing: calc(-0.04em - 0.001vw)}
 h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
@@ -509,7 +509,6 @@ body.page-contact #navbar .nav-list li a :hover{
     display: flex;
     width: 100%;
     flex-direction: row;
-    gap: 2rem;
     padding-bottom: 4rem;
 }
 
