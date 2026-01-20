@@ -331,7 +331,7 @@ header {
     margin: 0;
     padding: 0;
     display: flex;          /* make children horizontal */
-   gap: clamp(12px, 1.04vw, 40px);           /* optional spacing between items */
+   gap: clamp(20px, 2.08vw, 60px);
 }
 /*NAV CUSTOM COLORS FOR THE BODY PAGE CONTACT */
 
