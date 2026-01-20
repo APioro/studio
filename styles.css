@@ -270,10 +270,9 @@ header {
 
 #navbar .logo img {
     
-    max-height: 42px;         /* Set a relative height that fits your navbar */
-    width: auto;            /* Keep aspect ratio */
-    padding-top: 0px;
-    margin-left:0px;
+    max-height: 63px;
+    width: auto;
+    margin-left: 8px;
     
 }
 
@@ -325,6 +324,13 @@ header {
     color: #996211;
 }
 
+.nav-list ul{
+    list-style-type: none;  /* remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;          /* make children horizontal */
+    gap: 20px;              /* optional spacing between items */
+}
 /*NAV CUSTOM COLORS FOR THE BODY PAGE CONTACT */
 
 body.page-contact #navbar {
