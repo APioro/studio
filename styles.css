@@ -303,10 +303,11 @@ header {
 }
 
 .nav-list li a {
-     font-family: var(--font-primary), sans-serif;
-    font-size: 1rem;
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--lh-h3);
+    font-weight: var(--fw-medium);
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #fcfcf9;
     transition: color 0.3s ease;
 }
  @media (max-width: 768px){
@@ -330,7 +331,7 @@ header {
     margin: 0;
     padding: 0;
     display: flex;          /* make children horizontal */
-    gap: 20px;              /* optional spacing between items */
+   gap: clamp(12px, 1.04vw, 40px);           /* optional spacing between items */
 }
 /*NAV CUSTOM COLORS FOR THE BODY PAGE CONTACT */
 
