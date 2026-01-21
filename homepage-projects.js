@@ -79,7 +79,7 @@ function createTiles() {
 
     // Create overlay
     const overlay = document.createElement("div");
-    overlay.className = overlay.className = `overlay ${project.theme || "light"}`;
+   overlay.className = `overlay ${project.theme || "light"}`;
 ; // or use "dark" for white text on dark image
 
     const title = document.createElement("div");
