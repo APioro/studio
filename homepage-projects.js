@@ -62,7 +62,7 @@ const projects = [
 function createTiles() {
   const gridContainer = document.getElementById("grid-container");
 
-  projects.forEach(project => {
+  projects.forEach((project, index) => {
     const gridItem = document.createElement("div");
     gridItem.classList.add("homepage-grid-item", project.size);
 
