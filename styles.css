@@ -454,7 +454,7 @@ margin-right: clamp(1rem, 7vw, 9rem);
     gap:4rem;
     height: 64vh;
     align-items: flex-end;
-
+    padding-top: 3rem;
     padding-left:  clamp(1rem, 7vw, 9rem);
     padding-right:  clamp(1rem, 7vw, 9rem);
 }
