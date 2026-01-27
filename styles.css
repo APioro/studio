@@ -57,6 +57,7 @@
   /* Optional weights */
   --fw-regular: 400;
   --fw-medium: 500;
+--fw-semibold: 600;
   --fw-bold: 700;
   --fw-black: 900;
 
@@ -447,6 +448,7 @@ margin-right: clamp(1rem, 7vw, 9rem);
 
 .header-wrapper{
     display: flex;
+    flex-direction: column;
     /* flex-direction:row; */
     /* justify-items:flex-end; */
     gap:4rem;
@@ -471,15 +473,6 @@ margin-right: clamp(1rem, 7vw, 9rem);
 
 .wrapper{
     display: flex;
-    height: auto;
-    /* flex-grow: 1; */
-    align-items: flex-start;
-    /* min-height: 17rem; */
-}
-
-.wrapper-vertical{
-    display: flex;
-    flex-direction: column;
     height: auto;
     /* flex-grow: 1; */
     align-items: flex-start;
@@ -622,6 +615,7 @@ section {
     padding: 4rem  clamp(1rem, 7vw, 9rem);
     text-align: left;  /* Align text to the left */
 }
+
 
 @media (max-width: 768px) {
     
@@ -1386,18 +1380,77 @@ section {
     max-width: 900px; /* Locks the image width to 300px */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*SECTION FOR CONTACT FORM*/
+/*main structure wrapper*/
+.wrapper-contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 7vw, 9rem);;
+  min-height: 100vh;
+}
+
+/*to stack title with form*/
+.wrapper-vertical{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* flex-grow: 1; */
+    align-items: flex-start;
+    /* min-height: 17rem; */
+}
+
+#form-header{
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+
+#image-contact{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .wrapper-contact {
+    grid-template-columns: 1fr;
+  }
+
+  #image-contact {
+    height: 40vh;
+  }
+
+  .wrapper-vertical {
+    padding: 2rem;
+  }
+}
+
 form{
   display:flex;
   flex-direction:column;
-  padding-left: 8rem;
-  gap:20px;
-  max-width:720px; /* optional */
+  gap:26px;
+  max-width:700px; /* optional */
 }
 
 /* Labels stack input below text */
 label{
+  font-size: var(--fs );
   display:block;
   font-family:var(--font-primary), sans-serif;
+font-weight: var(--fw-medium);
+
 }
 
 /* Only style text-like inputs */
@@ -1409,23 +1462,22 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  background-color:#e8e8e8;
+  background-color:#f1f1f1;
   padding:12px 16px;
   outline:none;
   width:100%;
-  color:#3f3f3f;
+  color:#111;
   border-radius:8px;
-  border:1px solid #d1d1d1;
+  border:none;
   transition:border-color 0.1s ease;
   font-family:inherit;
   font-size:16px;
   box-sizing:border-box;
-  margin-top:0.6rem;
-}
+  cursor: pointer;
 
-/* Placeholder color */
-input::placeholder,
-textarea::placeholder { color:#ccc; }
+  margin-top:0.2rem;
+padding-right: 2.5rem;
+}
 
 /* Checkbox reset + nicer look */
 input[type="checkbox"]{
@@ -1434,33 +1486,6 @@ input[type="checkbox"]{
   accent-color:#596A95;  /* modern browsers */
 }
 
-/* Services group */
-.services-group{
-  border:none;
-  padding:0;
-  margin:0;
-}
-
-.services-group legend{
-  font-weight:600;
-  margin-bottom:0.5rem;
-  font-family:var(--font-primary), sans-serif;
-}
-
-/* Grid list for checkboxes */
-.services-list{
-  display:grid;
-  gap:0.6rem 1rem;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.checkbox-label{
-  font-family:var(--font-primary), sans-serif;
-  display:flex;
-  align-items:center;
-  gap:0.5rem;
-  line-height:1.2;
-}
 
 /* Button (optional) */
 button[type="submit"]{
@@ -1473,3 +1498,7 @@ button[type="submit"]{
   cursor:pointer;
 }
 button[type="submit"]:hover{ opacity:0.95; }
+
+
+
+

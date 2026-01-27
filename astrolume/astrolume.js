@@ -1,7 +1,7 @@
 // PHOTOES FOR DARKER TALES PROJECT
 const projects = [
     {
-        image: "moonbun-logo-black-square.jpg", // Original image path
+        image: "astrolume-keychain.jpg", // Original image path
         size: "half",  
 
     },
@@ -9,11 +9,9 @@ const projects = [
     
     
     {
-        image: "mock-up-moon-bun.png", // Original image path
+        image: "astrolume-tshirt.jpg", // Original image path
         size: "half",
     },
-
-
 
   
 
