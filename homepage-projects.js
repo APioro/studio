@@ -3,7 +3,7 @@ const projects = [
     {
     title: "Astrolume",
     category: "Branding",
-    image: "astrolume/astrolume.jpg",
+    image: "astrolume/cxc.jpg",
     size: "half",
     link: "astrolume/astrolume.html",
     theme: "light"

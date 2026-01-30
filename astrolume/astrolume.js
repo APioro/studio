@@ -1,7 +1,7 @@
 // PHOTOES FOR DARKER TALES PROJECT
 const projects = [
     {
-        image: "astrolume-keychain.jpg", // Original image path
+        image: "logo-balck-astro.jpg", // Original image path
         size: "half",  
 
     },
@@ -9,22 +9,44 @@ const projects = [
     
     
     {
-        image: "astrolume-tshirt.jpg", // Original image path
+        image: "notepad-astro.jpg", // Original image path
         size: "half",
     },
 
   
-
-    {
-        image: "website.png",
-        size: "half", 
+        {
+        image: "chain-astro.jpg", // Original image path
+        size: "half",
+    },
+  
+                {
+        image: "d.jpg", // Original image path
+        size: "half",
     },
 
     
+
     {
-        image: "minimalistic-logo.png", // Original image path
+        image: "crad-astro.jpg", // Original image path
         size: "half",
     },
+
+           {
+        image: "color-palette-astro.jpg", // Original image path
+        size: "half",
+    },
+    {
+        image: "cxc.jpg",
+        size: "half", 
+    },
+
+    {
+        image: "tshirt.jpg", // Original image path
+        size: "half",
+    },
+    
+
+
     // Add more projects as needed...
 ];
 
