@@ -121,7 +121,25 @@ small {
     h2 { font-size: var(--fs-m-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw); margin-bottom: 0;} 
     h3 { font-size: var(--fs-m-h3); line-height: var(--lh-h3); font-weight: var(--fw-medium); letter-spacing: calc(-0.04em - 0.001vw)}
     h4 { font-size: var(--fs-m-h4); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
- }
+    
+    p {
+    font-size: var(--fs-m-p);
+    line-height: var(--lh-p);
+    font-weight: var(--fw-medium);
+
+    margin-bottom: 1em; /* spacing between paragraphs */
+    }
+
+    small {
+    font-size: var(--fs-m-small);
+    line-height: var(--lh-small);
+    }
+
+    .running-h{font-size: var(--fs-m-running-h); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
+    .tiny{ font-size: var(--fs-m-tiny); line-height: var(--lh-tiny); font-weight: var(--fw-medium);}
+
+
+}
 
 /* Bold BLUU NEXT */
 @font-face {
@@ -440,6 +458,14 @@ body.page-contact #navbar .nav-list li a :hover{
     color: #000;
     border-color: #000;
     font-weight: var(--fw-medium);
+}
+
+@media(max-width: 768px) {
+
+    .button-primary{
+        font-size: var(--fs-m-small);
+    }
+
 }
 
 .link{
