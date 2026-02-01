@@ -83,10 +83,6 @@ h1, h2, h3, h4 {
   margin-bottom: 0.8em; /* scales with font size */
 }
 
-p{
-    margin: 0;
-    margin-bottom: 0.8em; /* scales with font size */
-}
 
 h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: var(--fw-bold);  letter-spacing: calc(-0.03em - 0.001vw); margin: 0;}
 h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw); margin-bottom: 0;} 
@@ -99,8 +95,9 @@ p {
   font-size: var(--fs-p);
   line-height: var(--lh-p);
   font-weight: var(--fw-medium);
-
+  margin: 0;
   margin-bottom: 1em; /* spacing between paragraphs */
+  
 }
 
 small {
@@ -126,7 +123,6 @@ small {
     font-size: var(--fs-m-p);
     line-height: var(--lh-p);
     font-weight: var(--fw-medium);
-
     margin-bottom: 1em; /* spacing between paragraphs */
     }
 
@@ -475,6 +471,7 @@ body.page-contact #navbar .nav-list li a :hover{
     font-family: var(--font-secondary);
     font-weight: var(--fw-medium);
     cursor: pointer;
+    margin-top: 0.8em; 
 }
 
 .divider {
@@ -490,14 +487,14 @@ margin-right: clamp(1rem, 7vw, 9rem);
 .header-wrapper{
     display: flex;
     flex-direction: column;
-    /* flex-direction:row; */
-    /* justify-items:flex-end; */
-    gap:4rem;
-    height: 64vh;
+    /* flex-direction: row; */
+    /* justify-items: flex-end; */
+    gap: 4rem;
+    height: 55vh;
     align-items: flex-end;
-    padding-top: 3rem;
-    padding-left:  clamp(1rem, 7vw, 9rem);
-    padding-right:  clamp(1rem, 7vw, 9rem);
+    padding-top: 6rem;
+    padding-left: clamp(1rem, 7vw, 9rem);
+    padding-right: clamp(1rem, 7vw, 9rem);
 }
 
 @media (max-width: 768px) {
@@ -979,19 +976,35 @@ section {
 
 .homepage-text{
      padding: 9rem clamp(1rem, 7vw, 9rem);
+     
+}
+
+.short p{
+color:#414141;
 }
 
 .text-left-sided{
     padding-right:clamp(1rem, 10vw, 17rem);
 }
 
+@media (max-width: 768px) {
+
+
+    #portrait-shot {
+        order: 1; /* photo first */
+    }
+
+    #text-homepage-1 {
+        order: 2; /* text second */
+    }
+}
 
 
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* stack all items in one column */
         padding: 0 10px;             /* optional padding */
-        gap: 1rem;                   /* spacing between items */
+        gap: 2rem;                   /* spacing between items */
     }
 
     .homepage-text{
