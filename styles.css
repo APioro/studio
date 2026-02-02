@@ -85,7 +85,7 @@ h1, h2, h3, h4 {
 
 
 h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: var(--fw-bold);  letter-spacing: calc(-0.03em - 0.001vw); margin: 0;}
-h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw); margin-bottom: 0;} 
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw); margin-bottom: 1.4rem;} 
 h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: var(--fw-medium); letter-spacing: calc(-0.04em - 0.001vw)}
 h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
 
@@ -115,7 +115,7 @@ small {
 
  @media (max-width: 768px){
     h1 { font-size: var(--fs-m-h1); line-height: var(--lh-h1); font-weight: var(--fw-bold);  letter-spacing: calc(-0.03em - 0.001vw); margin: 0;}
-    h2 { font-size: var(--fs-m-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw); margin-bottom: 0;} 
+    h2 { font-size: var(--fs-m-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: calc(-0.02em - 0.001vw); margin-bottom: 1.4rem;} 
     h3 { font-size: var(--fs-m-h3); line-height: var(--lh-h3); font-weight: var(--fw-medium); letter-spacing: calc(-0.04em - 0.001vw)}
     h4 { font-size: var(--fs-m-h4); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
     
@@ -979,6 +979,16 @@ section {
      
 }
 
+.process-text{
+     padding: 4rem clamp(1rem, 7vw, 9rem);
+     
+}
+
+.process-text.black{
+    background-color: #000;
+    color: white;
+}
+
 .short p{
 color:#414141;
 }
@@ -987,9 +997,17 @@ color:#414141;
     padding-right:clamp(1rem, 10vw, 17rem);
 }
 
+.text-right-sided{
+    padding-left:clamp(1rem, 10vw, 17rem);
+}
+
+
 
 @media (max-width: 768px) {
-
+    .text-right-sided{
+    padding-left: 0;
+    padding-right:clamp(1rem, 10vw, 17rem);
+    }/* its the same as left0sided cause everything stacks and should look the same */
 
     #portrait-shot {
         order: 1; /* photo first */
@@ -997,6 +1015,14 @@ color:#414141;
 
     #text-homepage-1 {
         order: 2; /* text second */
+    }
+
+    .process-img{
+        order:2;
+    }
+
+    .process-description{
+        order: 1;
     }
 }
 
@@ -1008,7 +1034,12 @@ color:#414141;
         gap: 2rem;                   /* spacing between items */
     }
 
-    .homepage-text{
+    .homepage-text {
+     padding: 4rem clamp(1rem, 7vw, 9rem);
+    }
+
+    
+    .process-text {
      padding: 4rem clamp(1rem, 7vw, 9rem);
     }
 
