@@ -1006,9 +1006,13 @@ color:#414141;
 @media (max-width: 768px) {
     .text-right-sided{
     padding-left: 0;
-    padding-right:clamp(1rem, 10vw, 17rem);
+    padding-right:0;
     }/* its the same as left0sided cause everything stacks and should look the same */
 
+    .text-left-sided{
+        padding-left: 0;
+        padding-right: 0;
+    }
     #portrait-shot {
         order: 1; /* photo first */
     }
