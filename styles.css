@@ -1182,9 +1182,9 @@ color:#414141;
 
 .project-info-container {
     display: flex;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding-bottom: 3.4rem;
+    padding-left: clamp(1rem, 7vw, 9rem);
+     padding-right: clamp(1rem, 7vw, 9rem);
+    padding-bottom:  clamp(1rem, 7vw, 9rem);;
     gap:14rem;
     
 }
@@ -1274,6 +1274,7 @@ color:#414141;
 /* AC styling section */
 
 .project-text-wrapper {
+    color: #fff;
     display: flex;
     flex-direction: column;
     padding-bottom: 3.4rem;
@@ -1286,8 +1287,7 @@ color:#414141;
 }
 
 .project-subtitle {
-    font-size: 1.2rem;
-    text-transform: uppercase;
+
     font-weight: bold;
     padding-bottom: 0.6rem;
     padding-top:0.6rem;

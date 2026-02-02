@@ -15,12 +15,12 @@ const projects = [
 
     {
         type: "text",
-        subtitle: "Identifying Core Problems",
+        subtitle: "Identifying core problems",
         description: "I given full freedom to decide the project’s focus, so I began by evaluating the existing webshop using heuristic analysis and quick user feedback sessions. The most critical issues emerged around navigation and product discovery, clarity of product information and purchase model, and overall brand coherence. These became the main areas I prioritized for redesign.",
     },
     {
         type: "text",
-        subtitle: "navigation",
+        subtitle: "Navigation",
         description: "The original mobile navigation felt cluttered and inconsistent, mixing articles, blog posts, and products under unclear labels. I reduced the number of categories to four to create a more focused structure with fewer distractions. This helped users quickly understand where to go and made the browsing experience feel calmer and more intentional.",
     },
 
@@ -71,7 +71,7 @@ const projects = [
     },
     {
         type: "text",
-        subtitle: "...AND DONE!",
+        subtitle: "Final outcome",
         description: "Refining an existing, content-rich brand—improving clarity, consistency, and engagement—can be harder than starting from scratch, but it’s also incredibly rewarding. I approached it strategically. There was a huge amount of invisible work in this project, from UX standards alignment and competitor analysis to technical considerations.",
     },
 
@@ -116,7 +116,7 @@ function createTiles() {
 
             // Subtitle
             if (project.subtitle) {
-                const subtitle = document.createElement("div");
+                const subtitle = document.createElement("h4");
                 subtitle.classList.add("project-subtitle");
                 subtitle.textContent = project.subtitle;
                 textWrapper.appendChild(subtitle);
@@ -124,7 +124,7 @@ function createTiles() {
 
             // Description
             if (project.description) {
-                const descDiv = document.createElement("div");
+                const descDiv = document.createElement("p");
                 descDiv.textContent = project.description;
                 textWrapper.appendChild(descDiv);
             }
