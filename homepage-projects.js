@@ -5,7 +5,7 @@ const projects = [
     category: "Branding",
     image: "astrolume/cxc.jpg",
     size: "half",
-    link: "astrolume/astrolume.html",
+    link: "astrolume/astrolume",
     theme: "light"
   },
 
@@ -16,7 +16,7 @@ const projects = [
     category: "Branding, Packaging",
     image: "bowld/asparagus.jpg",
     size: "half",
-    link: "bowld/bowld.html",
+    link: "bowld/bowld",
     theme: "dark" // black text
   },
 
@@ -38,7 +38,7 @@ const projects = [
     category: "UX/UI Design, E-commerce",
     image: "absolute collagen/ac-mockup-closeup.png",
     size: "half",
-    link: "absolute collagen/absolute-collagen.html",
+    link: "absolute collagen/absolute-collagen",
     theme: "dark" // white text
   },
 
@@ -49,7 +49,7 @@ const projects = [
     category: "Branding, Social Media, NGO",
     image: "artsider/artsider_cards.jpg",
     size: "half",
-    link: "artsider/artsider.html",
+    link: "artsider/artsider",
     theme: "light"
   },
   
