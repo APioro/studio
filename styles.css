@@ -39,7 +39,7 @@
   --fs-h2: clamp(48px, 3.2vw, 130px); /* major sections */
   --fs-h3: clamp(36px, 2vw, 74px);  /* subsection headings */
   --fs-h4: clamp(24px, 1.6vw, 48px);  /* minor headings */
-  --fs-running-h: clamp(20px, 1.2vw, 36px);
+  --fs-ning-hrun: clamp(20px, 1.2vw, 36px);
   --fs-p: clamp(18px, 1vw, 36px); 
   --fs-small: clamp(16px, 0.9vw, 28px);
   --fs-tiny: clamp(16px, 0.9vw, 28px);
@@ -105,7 +105,7 @@ small {
   line-height: var(--lh-small);
 }
 
-.running-h{font-family: var(--font-secondary); font-size: var(--fs-running-h); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
+running-h.{font-family: var(--font-secondary); font-size: var(--fs-running-h); line-height: var(--lh-h4); font-weight: var(--fw-medium); }
 .tiny{font-family: var(--font-secondary); font-size: var(--fs-tiny); line-height: var(--lh-tiny); font-weight: var(--fw-medium);}
 
 .dark-section {
@@ -474,16 +474,6 @@ body.page-contact #navbar .nav-list li a :hover{
     margin-top: 0.8em; 
 }
 
-.divider {
-  height: 2px;
-  background-color: #ccc;
-  width: 100%;
-margin-left: clamp(1rem, 7vw, 9rem);
-margin-right: clamp(1rem, 7vw, 9rem);
-}
-
-
-
 .header-wrapper{
     display: flex;
     flex-direction: column;
@@ -668,9 +658,14 @@ section {
 
 #graphic-design {
     background-color: #000;
+    color: var(--text-on-dark);
     
 }
 
+.graphic-design-white{
+     background-color: #fcfcf9;
+    color: var(--text-on-light);
+}
 
 
 
@@ -989,9 +984,16 @@ section {
     color: white;
 }
 
-.short p{
-color:#414141;
+.white-text{
+    color: white;
 }
+
+.divider{
+    margin-top: 14rem;
+
+}
+
+
 
 .text-left-sided{
     padding-right:clamp(1rem, 10vw, 17rem);
@@ -1274,7 +1276,6 @@ color:#414141;
 /* AC styling section */
 
 .project-text-wrapper {
-    color: #fff;
     display: flex;
     flex-direction: column;
     padding-bottom: 3.4rem;
@@ -1288,9 +1289,23 @@ color:#414141;
 
 .project-subtitle {
 
-    font-weight: bold;
+
     padding-bottom: 0.6rem;
     padding-top:0.6rem;
+    
+}
+
+.callout-black {
+    color: white;
+    background-color: #000;
+    padding: 4rem;
+    max-width: 55vh
+}
+
+.callout-yellow {
+    color: rgb(0, 0, 0);
+    background-color: #FFCE05;
+    padding: 4rem;
     
 }
 
