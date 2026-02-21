@@ -3,9 +3,9 @@ const projects = [
     {
     title: "Astrolume",
     category: "Branding",
-    image: "astrolume/cxc.jpg",
+    image: "/photos/astrolume/cxc.jpg",
     size: "half",
-    link: "/photos/astrolume/astrolume",
+    link: "astrolume/astrolume",
     theme: "light"
   },
 
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Absolute Collagen",
     category: "UX/UI Design, E-commerce",
-    image: "/photos/absolute collagen/ac-mockup-closeup.png",
+    image: "/photos/absolute-collagen/ac-mockup-closeup.png",
     size: "half",
     link: "absolute collagen/absolute-collagen",
     theme: "dark" // white text
