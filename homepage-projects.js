@@ -5,7 +5,7 @@ const projects = [
     category: "Branding",
     image: "astrolume/cxc.jpg",
     size: "half",
-    link: "astrolume/astrolume",
+    link: "/photos/astrolume/astrolume",
     theme: "light"
   },
 
@@ -14,7 +14,7 @@ const projects = [
       {
     title: "Bowl'd Salad Bar",
     category: "Branding, Packaging",
-    image: "bowld/asparagus.jpg",
+    image: "/photos/bowld/asparagus.jpg",
     size: "half",
     link: "bowld/bowld",
     theme: "dark" // black text
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Absolute Collagen",
     category: "UX/UI Design, E-commerce",
-    image: "absolute collagen/ac-mockup-closeup.png",
+    image: "/photos/absolute collagen/ac-mockup-closeup.png",
     size: "half",
     link: "absolute collagen/absolute-collagen",
     theme: "dark" // white text
@@ -47,7 +47,7 @@ const projects = [
   {
     title: "Artsider Foundation ",
     category: "Branding, Social Media, NGO",
-    image: "artsider/artsider_cards.jpg",
+    image: "/photos/artsider/artsider_cards.jpg",
     size: "half",
     link: "artsider/artsider",
     theme: "light"
