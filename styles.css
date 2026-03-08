@@ -2,29 +2,28 @@
 
 @font-face {
   font-family: "Switzer";
-  src: url("/studio/fonts/Switzer-Variable.woff2") format("woff2-variations");
+  src: url("/fonts/Switzer-Variable.ttf");
   font-weight: 100 900; /* or whatever range the font supports */
   font-style: normal;
 }
-/*
+
 @font-face {
   font-family: "Switzer";
-  src: url("/studio/fonts/Switzer-VariableItalic.woff2") format("woff2-variations");
-  font-weight: 100 900; /* or whatever range the font supports 
+  src: url("/fonts/Switzer-VariableItalic.ttf") ;
+  font-weight: 100 900; /* or whatever range the font supports */
   font-style: italic;
 }
-*/
 
 @font-face {
   font-family: "AzeretMono";
-  src: url("/studio/fonts/AzeretMono-Variable.woff2") format("woff2-variations");
+  src: url("/fonts/AzeretMono-Variable.woff2") format("woff2-variations");
   font-weight: 100 900; /* or whatever range the font supports */
   font-style: normal;
 }
 
 @font-face {
   font-family: "AzeretMono";
-  src: url("/studio/fonts/AzeretMono-VariableItalic.woff2") format("woff2-variations");
+  src: url("/fonts/AzeretMono-VariableItalic.woff2") format("woff2-variations");
   font-weight: 100 900; /* or whatever range the font supports */
   font-style: italic;
 }
@@ -82,6 +81,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-primary);
   margin: 0;
   margin-bottom: 0.8em; /* scales with font size */
+  
 }
 
 
@@ -98,6 +98,7 @@ p {
   font-weight: var(--fw-medium);
   margin: 0;
   margin-bottom: 1em; /* spacing between paragraphs */
+   font-style: normal;
   
 }
 
@@ -166,7 +167,7 @@ body {
     background-color: #fcfcf9;;
     min-height: 100vh;
      transition: background-color 0.2s ease;
-    font-style: normal;
+
       overscroll-behavior: none;
       overflow-x: hidden;
   
