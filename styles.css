@@ -6,13 +6,14 @@
   font-weight: 100 900; /* or whatever range the font supports */
   font-style: normal;
 }
-
+/*
 @font-face {
   font-family: "Switzer";
-  src: url("/studio/fonts/Switzer-Variable.woff2") format("woff2-variations");
-  font-weight: 100 900; /* or whatever range the font supports */
+  src: url("/studio/fonts/Switzer-VariableItalic.woff2") format("woff2-variations");
+  font-weight: 100 900; /* or whatever range the font supports 
   font-style: italic;
 }
+*/
 
 @font-face {
   font-family: "AzeretMono";
@@ -31,7 +32,7 @@
 :root {
     overscroll-behavior: none;
 
-  --font-primary: 'Switzer Variable', sans-serif;
+  --font-primary: 'Switzer', sans-serif;
   --font-secondary: 'AzeretMono', monospace;
 
   /* font sizes*/
