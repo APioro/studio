@@ -31,7 +31,7 @@
 :root {
     overscroll-behavior: none;
 
-  --font-primary: 'Switzer', sans-serif;
+  --font-primary: 'Switzer Variable', sans-serif;
   --font-secondary: 'AzeretMono', monospace;
 
   /* font sizes*/
