@@ -53,6 +53,14 @@ const projects = [
     theme: "light"
   },
   
+     {
+    title: "HIGHLAND ENVIRONMENTAL ANALYTICS",
+    category: "COMING SOON",
+    image: "/photos/hea/hea_papers.jpg",
+    size: "half",
+    link: "",
+    theme: "light"
+  },
 
 ];
 
