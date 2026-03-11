@@ -58,7 +58,7 @@ const projects = [
     category: "COMING SOON",
     image: "/photos/hea/hea_papers.jpg",
     size: "half",
-    link: "",
+    link: "n",
     theme: "light"
   },
 
