@@ -831,7 +831,13 @@ section {
     grid-column: span 1; /* Span 1 column */
 }
 
-
+.grid-item.text-box {
+    min-height: 300px;      /* ensures tall enough */
+    margin-bottom: 64px;    /* spacing below */
+    justify-content: flex-start;
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
 
 
