@@ -47,10 +47,15 @@ const projects = [
     },
     {
         type: "image",
-        image: "/photos/hea/hea-mag.jpg",
+        image: "/photos/hea/tote.jpg",
         size: "half",
     },
-        {
+    {
+        type: "image",
+        image: "/photos/hea/hea_docs.jpg",
+        size: "large",
+    },
+    {
         type: "image",
         image: "/photos/hea/hea_papers_large.jpg",
         size: "large",
