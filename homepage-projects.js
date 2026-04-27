@@ -10,7 +10,7 @@ const projects = [
   },
 
 
-
+   /*
       {
     title: "Bowl'd Salad Bar",
     category: "Branding, Packaging",
@@ -21,7 +21,7 @@ const projects = [
   },
 
 
-  /*
+  
  {
     title: "Darker Tales ",
     category: "Editorial, Illustration",
