@@ -64,6 +64,7 @@
 
   
   /* Optional weights */
+    --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
 --fw-semibold: 600;
@@ -95,7 +96,7 @@ p {
   font-family: var(--font-primary);
   font-size: var(--fs-p);
   line-height: var(--lh-p);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-light);
   margin: 0;
   margin-bottom: 1em; /* spacing between paragraphs */
    font-style: normal;
@@ -124,7 +125,7 @@ running-h.{font-family: var(--font-secondary); font-size: var(--fs-running-h); l
     p {
     font-size: var(--fs-m-p);
     line-height: var(--lh-p);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-regular);
     margin-bottom: 1em; /* spacing between paragraphs */
     }
 
@@ -808,10 +809,31 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 0px; /* Rounded corners */
+
+    
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
     
 }
 
+.grid-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .grid-item img {
+    width: 100%;
+    height: auto;     /* this keeps the aspect ratio */
+    max-height: 100vh; 
+    display: block;
+    border-radius: 0px; /* Match the border-radius of the tile */
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.grid-item video {
     width: 100%;
     height: auto;     /* this keeps the aspect ratio */
     max-height: 100vh; 
@@ -833,7 +855,7 @@ section {
 
 .grid-item.text-box {
     min-height: 300px;      /* ensures tall enough */
-    margin-bottom: 64px;    /* spacing below */
+    margin-bottom: 18em;    /* spacing below */
     justify-content: flex-start;
     font-size: 1rem;
     line-height: 1.6;
