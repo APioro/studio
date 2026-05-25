@@ -16,16 +16,18 @@ const projects = [
          reminiscent of spectroscopy and chromatography. To warm up the brand image, I incorporated a graphical bird in place of the letter "A".</p>`,
         size: "half",
     },
+        {
+        type: "image",
+        image: "/photos/hea/hea_front.jpg",
+        size: "half",
+    },
+
     {
         type: "image",
         image: "/photos/hea/buliding.jpg",
         size: "half",
     },
-    {
-        type: "image",
-        image: "/photos/hea/logo_card.jpg",
-        size: "half",
-    },
+
 
     {
         type: "text",
@@ -39,17 +41,19 @@ const projects = [
          reminiscent of spectroscopy and chromatography. To warm up the brand image, I incorporated a graphical bird in place of the letter "A".</p>`,
         size: "half",
     },
+    
+    {
+        type: "image",
+        image: "/photos/hea/box_hea.jpg",
+        size: "half",
+    },
+    {
+        type: "image",
+        image: "/photos/hea/hea_social.jpg",
+        size: "half",
+    },
+    
 
-    {
-        type: "image",
-        image: "/photos/hea/hea_datasheet.jpg",
-        size: "half",
-    },
-    {
-        type: "image",
-        image: "/photos/hea/tote.jpg",
-        size: "half",
-    },
     {
         type: "image",
         image: "/photos/hea/hea_docs.jpg",
@@ -58,39 +62,39 @@ const projects = [
 
     {
         type: "image",
-        image: "/photos/hea/hea_app.jpg",
+        image: "/photos/hea/hea_datasheet.jpg",
+        size: "half",
+    },
+        {
+        type: "image",
+        image: "/photos/hea/brand_hea.jpg",
         size: "half",
     },
     {
         type: "image",
-        image: "/photos/hea/hea-mag.jpg",
+        image: "/photos/hea/tote.jpg",
         size: "half",
     },
+
     {
         type: "image",
-        image: "/photos/hea/hea_papers_large.jpg",
-        size: "large",
+        image: "/photos/hea/hea_colors.png",
+        size: "half",
     },
+
     {
         type: "image",
-<<<<<<< HEAD
         image: "/photos/hea/web_hea.mp4",
         size: "half",
-=======
-        image: "/photos/hea/logo_project.jpg",
-        size: "large",
->>>>>>> parent of 5ca4d4b (hea revamp page)
     },
-    {
-        type: "image",
-        image: "/photos/hea/artsider_socialmedia.jpg",
-        size: "large",
-    },
-    {
-        type: "image",
-        image: "/photos/hea/logo_rational.jpg",
-        size: "large",
-    }
+
+    // {
+    //     type: "image",
+    //     image: "/photos/hea/hea_papers_large.jpg",
+    //     size: "large",
+    // },
+    
+
     // You can add more images or text blocks anywhere
 ];
 
