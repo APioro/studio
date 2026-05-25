@@ -73,8 +73,13 @@ const projects = [
     },
     {
         type: "image",
+<<<<<<< HEAD
+        image: "/photos/hea/web_hea.mp4",
+        size: "half",
+=======
         image: "/photos/hea/logo_project.jpg",
         size: "large",
+>>>>>>> parent of 5ca4d4b (hea revamp page)
     },
     {
         type: "image",
