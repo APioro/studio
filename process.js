@@ -6,8 +6,8 @@ const steps = [
   { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
   { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
   { title: "Absolute Collagen", text: "Branding & UX", size: "half" },
-    { title: "Absolute Collagen", text: "Branding & UX", size: "half" },
-     { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
+  { title: "Absolute Collagen", text: "Branding & UX", size: "half" },
+  { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
   { image: "/studio/absolute collagen/ac-mockup-far.jpg", size: "half" },
   { title: "Absolute Collagen", text: "Case Study", size: "half" },
 ];

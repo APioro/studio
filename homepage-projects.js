@@ -1,8 +1,17 @@
 const projects = [
   
-    {
+       {
+    title: "HIGHLAND ENVIRONMENTAL ANALYTICS",
+    category: "BRAND IDENTITY",
+    image: "/photos/hea/brand_hea.jpg",
+    size: "half",
+    // link: "hea/hea",
+    theme: "light"
+  },
+
+  {
     title: "Astrolume",
-    category: "Branding",
+    category: "BRAND IDENTITY",
     image: "/photos/astrolume/cxc.jpg",
     size: "half",
     link: "astrolume/astrolume",
@@ -46,51 +55,68 @@ const projects = [
 
   {
     title: "Artsider Foundation ",
-    category: "Branding, Social Media, NGO",
+    category: "BRAND IDENTITY",
     image: "/photos/artsider/artsider_cards.jpg",
     size: "half",
     link: "artsider/artsider",
     theme: "light"
   },
   
-     {
-    title: "HIGHLAND ENVIRONMENTAL ANALYTICS",
-    category: "COMING SOON",
-    image: "/photos/hea/hea_papers.jpg",
-    size: "half",
-    link: "n",
-    theme: "light"
-  },
+
 
 ];
 
   
     // Add more projects as needed...
+function observeTiles() {
+    const items = document.querySelectorAll(".grid-item");
 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // animate once
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
 
-// Function to create and append tiles to the grid
+    items.forEach(item => observer.observe(item));
+}
+
 function createTiles() {
   const gridContainer = document.getElementById("grid-container");
 
   projects.forEach((project, index) => {
+
     const gridItem = document.createElement("div");
     gridItem.classList.add("homepage-grid-item", project.size);
 
-    const img = document.createElement("img");
-    img.src = project.image;
-    img.alt = project.title;
+    // ---------- MEDIA ----------
+    let media;
 
-    if(index !== 0) img.loading = "lazy";
+    if (project.video) {
+      media = document.createElement("video");
+      media.src = project.video;
+      media.autoplay = true;
+      media.muted = true;
+      media.loop = true;
+      media.playsInline = true;
+    } else {
+      media = document.createElement("img");
+      media.src = project.image;
+      media.alt = project.title;
+      if (index !== 0) media.loading = "lazy";
+    }
 
     const link = document.createElement("a");
     link.href = project.link;
-   
-    link.appendChild(img);
+    link.appendChild(media);
 
-    // Create overlay
+    // ---------- OVERLAY ----------
     const overlay = document.createElement("div");
-   overlay.className = `overlay ${project.theme || "light"}`;
-; // or use "dark" for white text on dark image
+    overlay.className = `overlay ${project.theme || "light"}`;
 
     const title = document.createElement("div");
     title.className = "overlay-title top-left";
@@ -103,6 +129,7 @@ function createTiles() {
     overlay.appendChild(title);
     overlay.appendChild(category);
 
+    // ---------- APPEND ----------
     gridItem.appendChild(link);
     gridItem.appendChild(overlay);
 
@@ -112,3 +139,4 @@ function createTiles() {
 
 // Call the function to create tiles
 createTiles();
+observeTiles();

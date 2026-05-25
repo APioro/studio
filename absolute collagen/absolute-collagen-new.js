@@ -1,4 +1,3 @@
-
 const projects = [
     {
         type: "media",
@@ -11,20 +10,16 @@ const projects = [
         size: "half",
     },
 
-
-
     {
         type: "text",
         subtitle: "Identifying core problems",
-        description: "I given full freedom to decide the project’s focus, so I began by evaluating the existing webshop using heuristic analysis and quick user feedback sessions. The most critical issues emerged around navigation and product discovery, clarity of product information and purchase model, and overall brand coherence. These became the main areas I prioritized for redesign.",
+        description: "I was given full freedom to decide the project’s focus, so I began by evaluating the existing webshop using heuristic analysis and quick user feedback sessions. The most critical issues emerged around navigation and product discovery, clarity of product information and purchase model, and overall brand coherence. These became the main areas I prioritized for redesign.",
     },
     {
         type: "text",
         subtitle: "Navigation",
         description: "The original mobile navigation felt cluttered and inconsistent, mixing articles, blog posts, and products under unclear labels. I reduced the number of categories to four to create a more focused structure with fewer distractions. This helped users quickly understand where to go and made the browsing experience feel calmer and more intentional.",
     },
-
-
 
     {
         type: "media",
@@ -37,8 +32,7 @@ const projects = [
         size: "half",
     },
 
-
-        {
+    {
         type: "text",
         subtitle: "Product showcase & pricing",
         description: "I added lifestyle previews to show the product in action and encourage clicks. A clickable rating next to the title directs users to reviews faster. I clarified pricing by showing cost per sachet, and made the total order cost, any gift offers, and delivery details very prominent — reducing surprises and building trust.",
@@ -46,11 +40,8 @@ const projects = [
     {
         type: "text",
         subtitle: "Information Hierarchy",
-        description: "The challenge was that Absolute Collagen’s site had a wealth of content, but it was overwhelming and hard to navigate. I restructured the product information based on a user card-sorting exercise, categorizing content where users expected to find it. I added bullet points for quick scanning and combined ingredient details with usage instructions, addressing a key need for clarity. I also created product highlights and infographics to showcase the supplement’s benefits and results, establishing a clear hierarchy and making the page both informative and visually digestible.",
+        description: "The challenge was that the site had a lot of content but it was overwhelming. I reorganized it based on user expectations, added bullet points for scanning, and built clearer visual hierarchy with infographics and grouped information.",
     },
-
-
-
 
     {
         type: "media",
@@ -63,79 +54,107 @@ const projects = [
         size: "half",
     },
 
-
-        {
+    {
         type: "text",
         subtitle: "Brand consistency",
-        description: "I noticed the brand had multiple visual directions across the site, so I streamlined it by choosing a single primary yellow, unifying buttons, icons, and typography, and designing flexible assets for infographics and social media. The goal was a clean, modern look with a luxurious feel, making the site consistent, engaging, and accessible for the audience.",
+        description: "I unified the visual language by standardising colour, typography and UI components to create a more coherent and premium feel.",
     },
     {
         type: "text",
         subtitle: "Final outcome",
-        description: "Refining an existing, content-rich brand—improving clarity, consistency, and engagement—can be harder than starting from scratch, but it’s also incredibly rewarding. I approached it strategically. There was a huge amount of invisible work in this project, from UX standards alignment and competitor analysis to technical considerations.",
+        description: "Refining an existing content-rich brand requires balancing clarity, consistency and engagement while preserving existing assets.",
     },
-
 ];
 
-// Function to create and append tiles to the grid
+// -------------------- CREATE TILES --------------------
+
 function createTiles() {
     const gridContainer = document.getElementById("grid-container");
 
     projects.forEach(project => {
+
         const gridItem = document.createElement("div");
         gridItem.classList.add("grid-item");
         if (project.size) gridItem.classList.add(project.size);
 
+        // ---------------- MEDIA ----------------
         if (project.type === "media") {
-            // IMAGE OR VIDEO
-            const ext = project.image.split('.').pop().toLowerCase();
+
+            const isVideo = project.image.endsWith(".mp4");
             let media;
 
-            if (ext === 'mp4') {
+            if (isVideo) {
                 media = document.createElement("video");
                 media.src = project.image;
                 media.autoplay = true;
                 media.loop = true;
                 media.muted = true;
                 media.playsInline = true;
-                media.loading = "lazy";
-                media.style.width = "100%";
-                media.style.objectFit = "cover";
             } else {
                 media = document.createElement("img");
                 media.src = project.image;
                 media.loading = "lazy";
+                media.alt = "";
             }
+
+            media.style.width = "100%";
+            media.style.height = "100%";
+            media.style.objectFit = "cover";
 
             gridItem.appendChild(media);
+        }
 
-        } else if (project.type === "text") {
-            // TEXT SECTION
-            const textWrapper = document.createElement("div");
-            textWrapper.classList.add("project-text-wrapper");
+        // ---------------- TEXT ----------------
+        else if (project.type === "text") {
 
-            // Subtitle
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("project-text-wrapper");
+
             if (project.subtitle) {
-                const subtitle = document.createElement("h4");
-                subtitle.classList.add("project-subtitle");
-                subtitle.textContent = project.subtitle;
-                textWrapper.appendChild(subtitle);
+                const h = document.createElement("h4");
+                h.classList.add("project-subtitle");
+                h.textContent = project.subtitle;
+                wrapper.appendChild(h);
             }
 
-            // Description
             if (project.description) {
-                const descDiv = document.createElement("p");
-                descDiv.textContent = project.description;
-                textWrapper.appendChild(descDiv);
+                const p = document.createElement("p");
+                p.textContent = project.description;
+                wrapper.appendChild(p);
             }
 
-            gridItem.appendChild(textWrapper);
+            gridItem.appendChild(wrapper);
         }
 
         gridContainer.appendChild(gridItem);
     });
 }
 
-document.addEventListener("DOMContentLoaded", createTiles);
+// -------------------- OBSERVER --------------------
 
-//CSS for this is in style.css and all should be under coment "AC styling section"
+function observeTiles() {
+    const items = document.querySelectorAll(".grid-item");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    items.forEach(item => observer.observe(item));
+}
+
+// -------------------- INIT (IMPORTANT FIX) --------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    createTiles();
+
+    requestAnimationFrame(() => {
+        observeTiles();
+    });
+});
