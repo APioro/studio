@@ -870,7 +870,13 @@ section {
     }
 }
 
+/* aligns the text to the left*/ 
 
+.project-title{
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    padding-top: 0.6rem;
+}
 
 /* Tile Styles for homepage*/
 
@@ -922,34 +928,6 @@ section {
     color: #000;                  /* Title color */
 }
 
-/* Base overlay styling */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.homepage-grid-item:hover .overlay {
-  opacity: 1;
-}
-
-/* Shared text styles */
-.overlay-title,
-.overlay-category {
-  position: absolute;
-  font-family: 'Urbanist', sans-serif;
-  font-weight: 800;
-  font-size: 2.1rem;
-  padding: 0.6em 1em;
-  pointer-events: none;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
 
 /* Positioning */
 .top-left {
@@ -1169,8 +1147,6 @@ section {
 
 }
 -------------------------------------------------------------------------------------*/
-
-
 
 .project-title-index {
     text-align: left;      /* aligns the text to the left*/
